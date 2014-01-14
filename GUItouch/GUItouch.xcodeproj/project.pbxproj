@@ -1,0 +1,701 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23DB4A631845607600BA92FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23DB4A621845607600BA92FB /* Foundation.framework */; };
+		23DB4A651845607600BA92FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23DB4A641845607600BA92FB /* CoreGraphics.framework */; };
+		23DB4A671845607600BA92FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23DB4A661845607600BA92FB /* UIKit.framework */; };
+		23DB4A6D1845607600BA92FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23DB4A6B1845607600BA92FB /* InfoPlist.strings */; };
+		23DB4A6F1845607600BA92FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB4A6E1845607600BA92FB /* main.m */; };
+		23DB4A731845607600BA92FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB4A721845607600BA92FB /* AppDelegate.m */; };
+		23DB4A7B1845607600BA92FB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23DB4A7A1845607600BA92FB /* Images.xcassets */; };
+		23DB4A821845607600BA92FB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23DB4A811845607600BA92FB /* XCTest.framework */; };
+		23DB4A831845607600BA92FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23DB4A621845607600BA92FB /* Foundation.framework */; };
+		23DB4A841845607600BA92FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23DB4A661845607600BA92FB /* UIKit.framework */; };
+		23DB4A8C1845607600BA92FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23DB4A8A1845607600BA92FB /* InfoPlist.strings */; };
+		23DB4A8E1845607600BA92FB /* GUItouchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB4A8D1845607600BA92FB /* GUItouchTests.m */; };
+		23DB4AE81845609500BA92FB /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23DB4AE71845609500BA92FB /* libCorePlot-CocoaTouch.a */; };
+		23DB4AEA184560AF00BA92FB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23DB4AE9184560AF00BA92FB /* QuartzCore.framework */; };
+		23DB4AEC1845612100BA92FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23DB4AEB1845612100BA92FB /* Main.storyboard */; };
+		23DB4AFD1845626000BA92FB /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB4AFA1845626000BA92FB /* Data.m */; };
+		23DB4AFE1845626000BA92FB /* ECG.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23DB4AFB1845626000BA92FB /* ECG.txt */; };
+		23DB4AFF1845626000BA92FB /* SCG.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23DB4AFC1845626000BA92FB /* SCG.txt */; };
+		23DB4B0A1845629900BA92FB /* DoubleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB4B011845629900BA92FB /* DoubleViewController.m */; };
+		23DB4B0B1845629900BA92FB /* ECGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB4B031845629900BA92FB /* ECGViewController.m */; };
+		23DB4B0C1845629900BA92FB /* FileRead.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB4B051845629900BA92FB /* FileRead.m */; };
+		23DB4B0D1845629900BA92FB /* OverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB4B071845629900BA92FB /* OverlayViewController.m */; };
+		23DB4B0E1845629900BA92FB /* SCGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB4B091845629900BA92FB /* SCGViewController.m */; };
+		23DB4B11184562BE00BA92FB /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB4B10184562BE00BA92FB /* MenuViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		23DB4A851845607600BA92FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23DB4A571845607500BA92FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23DB4A5E1845607600BA92FB;
+			remoteInfo = GUItouch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		23DB4A5F1845607600BA92FB /* GUItouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GUItouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		23DB4A621845607600BA92FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		23DB4A641845607600BA92FB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		23DB4A661845607600BA92FB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		23DB4A6A1845607600BA92FB /* GUItouch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GUItouch-Info.plist"; sourceTree = "<group>"; };
+		23DB4A6C1845607600BA92FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		23DB4A6E1845607600BA92FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		23DB4A701845607600BA92FB /* GUItouch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GUItouch-Prefix.pch"; sourceTree = "<group>"; };
+		23DB4A711845607600BA92FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		23DB4A721845607600BA92FB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		23DB4A7A1845607600BA92FB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		23DB4A801845607600BA92FB /* GUItouchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GUItouchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		23DB4A811845607600BA92FB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		23DB4A891845607600BA92FB /* GUItouchTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GUItouchTests-Info.plist"; sourceTree = "<group>"; };
+		23DB4A8B1845607600BA92FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		23DB4A8D1845607600BA92FB /* GUItouchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GUItouchTests.m; sourceTree = "<group>"; };
+		23DB4A991845609500BA92FB /* CorePlot-CocoaTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CorePlot-CocoaTouch.h"; sourceTree = "<group>"; };
+		23DB4A9A1845609500BA92FB /* CPTAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTAnimation.h; sourceTree = "<group>"; };
+		23DB4A9B1845609500BA92FB /* CPTAnimationOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTAnimationOperation.h; sourceTree = "<group>"; };
+		23DB4A9C1845609500BA92FB /* CPTAnimationPeriod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTAnimationPeriod.h; sourceTree = "<group>"; };
+		23DB4A9D1845609500BA92FB /* CPTAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTAnnotation.h; sourceTree = "<group>"; };
+		23DB4A9E1845609500BA92FB /* CPTAnnotationHostLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTAnnotationHostLayer.h; sourceTree = "<group>"; };
+		23DB4A9F1845609500BA92FB /* CPTAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTAxis.h; sourceTree = "<group>"; };
+		23DB4AA01845609500BA92FB /* CPTAxisLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTAxisLabel.h; sourceTree = "<group>"; };
+		23DB4AA11845609500BA92FB /* CPTAxisLabelGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTAxisLabelGroup.h; sourceTree = "<group>"; };
+		23DB4AA21845609500BA92FB /* CPTAxisSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTAxisSet.h; sourceTree = "<group>"; };
+		23DB4AA31845609500BA92FB /* CPTAxisTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTAxisTitle.h; sourceTree = "<group>"; };
+		23DB4AA41845609500BA92FB /* CPTBarPlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTBarPlot.h; sourceTree = "<group>"; };
+		23DB4AA51845609500BA92FB /* CPTBorderedLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTBorderedLayer.h; sourceTree = "<group>"; };
+		23DB4AA61845609500BA92FB /* CPTCalendarFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTCalendarFormatter.h; sourceTree = "<group>"; };
+		23DB4AA71845609500BA92FB /* CPTColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTColor.h; sourceTree = "<group>"; };
+		23DB4AA81845609500BA92FB /* CPTColorSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTColorSpace.h; sourceTree = "<group>"; };
+		23DB4AA91845609500BA92FB /* CPTConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTConstraints.h; sourceTree = "<group>"; };
+		23DB4AAA1845609500BA92FB /* CPTDataSourceTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTDataSourceTestCase.h; sourceTree = "<group>"; };
+		23DB4AAB1845609500BA92FB /* CPTDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTDefinitions.h; sourceTree = "<group>"; };
+		23DB4AAC1845609500BA92FB /* CPTDerivedXYGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTDerivedXYGraph.h; sourceTree = "<group>"; };
+		23DB4AAD1845609500BA92FB /* CPTExceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTExceptions.h; sourceTree = "<group>"; };
+		23DB4AAE1845609500BA92FB /* CPTFill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTFill.h; sourceTree = "<group>"; };
+		23DB4AAF1845609500BA92FB /* CPTFunctionDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTFunctionDataSource.h; sourceTree = "<group>"; };
+		23DB4AB01845609500BA92FB /* CPTGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTGradient.h; sourceTree = "<group>"; };
+		23DB4AB11845609500BA92FB /* CPTGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTGraph.h; sourceTree = "<group>"; };
+		23DB4AB21845609500BA92FB /* CPTGraphHostingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTGraphHostingView.h; sourceTree = "<group>"; };
+		23DB4AB31845609500BA92FB /* CPTGridLineGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTGridLineGroup.h; sourceTree = "<group>"; };
+		23DB4AB41845609500BA92FB /* CPTGridLines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTGridLines.h; sourceTree = "<group>"; };
+		23DB4AB51845609500BA92FB /* CPTImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTImage.h; sourceTree = "<group>"; };
+		23DB4AB61845609500BA92FB /* CPTLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTLayer.h; sourceTree = "<group>"; };
+		23DB4AB71845609500BA92FB /* CPTLayerAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTLayerAnnotation.h; sourceTree = "<group>"; };
+		23DB4AB81845609500BA92FB /* CPTLegend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTLegend.h; sourceTree = "<group>"; };
+		23DB4AB91845609500BA92FB /* CPTLegendEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTLegendEntry.h; sourceTree = "<group>"; };
+		23DB4ABA1845609500BA92FB /* CPTLimitBand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTLimitBand.h; sourceTree = "<group>"; };
+		23DB4ABB1845609500BA92FB /* CPTLineCap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTLineCap.h; sourceTree = "<group>"; };
+		23DB4ABC1845609500BA92FB /* CPTLineStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTLineStyle.h; sourceTree = "<group>"; };
+		23DB4ABD1845609500BA92FB /* CPTMutableLineStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTMutableLineStyle.h; sourceTree = "<group>"; };
+		23DB4ABE1845609500BA92FB /* CPTMutableNumericData+TypeConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CPTMutableNumericData+TypeConversion.h"; sourceTree = "<group>"; };
+		23DB4ABF1845609500BA92FB /* CPTMutableNumericData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTMutableNumericData.h; sourceTree = "<group>"; };
+		23DB4AC01845609500BA92FB /* CPTMutablePlotRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTMutablePlotRange.h; sourceTree = "<group>"; };
+		23DB4AC11845609500BA92FB /* CPTMutableShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTMutableShadow.h; sourceTree = "<group>"; };
+		23DB4AC21845609500BA92FB /* CPTMutableTextStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTMutableTextStyle.h; sourceTree = "<group>"; };
+		23DB4AC31845609500BA92FB /* CPTNumericData+TypeConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CPTNumericData+TypeConversion.h"; sourceTree = "<group>"; };
+		23DB4AC41845609500BA92FB /* CPTNumericData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTNumericData.h; sourceTree = "<group>"; };
+		23DB4AC51845609500BA92FB /* CPTNumericDataType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTNumericDataType.h; sourceTree = "<group>"; };
+		23DB4AC61845609500BA92FB /* CPTPathExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTPathExtensions.h; sourceTree = "<group>"; };
+		23DB4AC71845609500BA92FB /* CPTPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTPieChart.h; sourceTree = "<group>"; };
+		23DB4AC81845609500BA92FB /* CPTPlatformSpecificCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTPlatformSpecificCategories.h; sourceTree = "<group>"; };
+		23DB4AC91845609500BA92FB /* CPTPlatformSpecificDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTPlatformSpecificDefines.h; sourceTree = "<group>"; };
+		23DB4ACA1845609500BA92FB /* CPTPlatformSpecificFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTPlatformSpecificFunctions.h; sourceTree = "<group>"; };
+		23DB4ACB1845609500BA92FB /* CPTPlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTPlot.h; sourceTree = "<group>"; };
+		23DB4ACC1845609500BA92FB /* CPTPlotArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTPlotArea.h; sourceTree = "<group>"; };
+		23DB4ACD1845609500BA92FB /* CPTPlotAreaFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTPlotAreaFrame.h; sourceTree = "<group>"; };
+		23DB4ACE1845609500BA92FB /* CPTPlotGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTPlotGroup.h; sourceTree = "<group>"; };
+		23DB4ACF1845609500BA92FB /* CPTPlotRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTPlotRange.h; sourceTree = "<group>"; };
+		23DB4AD01845609500BA92FB /* CPTPlotSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTPlotSpace.h; sourceTree = "<group>"; };
+		23DB4AD11845609500BA92FB /* CPTPlotSpaceAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTPlotSpaceAnnotation.h; sourceTree = "<group>"; };
+		23DB4AD21845609500BA92FB /* CPTPlotSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTPlotSymbol.h; sourceTree = "<group>"; };
+		23DB4AD31845609500BA92FB /* CPTRangePlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTRangePlot.h; sourceTree = "<group>"; };
+		23DB4AD41845609500BA92FB /* CPTResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTResponder.h; sourceTree = "<group>"; };
+		23DB4AD51845609500BA92FB /* CPTScatterPlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTScatterPlot.h; sourceTree = "<group>"; };
+		23DB4AD61845609500BA92FB /* CPTShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTShadow.h; sourceTree = "<group>"; };
+		23DB4AD71845609500BA92FB /* CPTTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTTestCase.h; sourceTree = "<group>"; };
+		23DB4AD81845609500BA92FB /* CPTTextLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTTextLayer.h; sourceTree = "<group>"; };
+		23DB4AD91845609500BA92FB /* CPTTextStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTTextStyle.h; sourceTree = "<group>"; };
+		23DB4ADA1845609500BA92FB /* CPTTextStylePlatformSpecific.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTTextStylePlatformSpecific.h; sourceTree = "<group>"; };
+		23DB4ADB1845609500BA92FB /* CPTTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTTheme.h; sourceTree = "<group>"; };
+		23DB4ADC1845609500BA92FB /* CPTTimeFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTTimeFormatter.h; sourceTree = "<group>"; };
+		23DB4ADD1845609500BA92FB /* CPTTradingRangePlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTTradingRangePlot.h; sourceTree = "<group>"; };
+		23DB4ADE1845609500BA92FB /* CPTUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTUtilities.h; sourceTree = "<group>"; };
+		23DB4ADF1845609500BA92FB /* CPTXYAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTXYAxis.h; sourceTree = "<group>"; };
+		23DB4AE01845609500BA92FB /* CPTXYAxisSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTXYAxisSet.h; sourceTree = "<group>"; };
+		23DB4AE11845609500BA92FB /* CPTXYGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTXYGraph.h; sourceTree = "<group>"; };
+		23DB4AE21845609500BA92FB /* CPTXYPlotSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTXYPlotSpace.h; sourceTree = "<group>"; };
+		23DB4AE31845609500BA92FB /* mainpage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mainpage.h; sourceTree = "<group>"; };
+		23DB4AE41845609500BA92FB /* NSCoderExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCoderExtensions.h; sourceTree = "<group>"; };
+		23DB4AE51845609500BA92FB /* NSDecimalNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDecimalNumberExtensions.h; sourceTree = "<group>"; };
+		23DB4AE61845609500BA92FB /* NSNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberExtensions.h; sourceTree = "<group>"; };
+		23DB4AE71845609500BA92FB /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
+		23DB4AE9184560AF00BA92FB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		23DB4AEB1845612100BA92FB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
+		23DB4AF91845626000BA92FB /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Data.h; path = ../Data.h; sourceTree = "<group>"; };
+		23DB4AFA1845626000BA92FB /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Data.m; path = ../Data.m; sourceTree = "<group>"; };
+		23DB4AFB1845626000BA92FB /* ECG.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ECG.txt; path = ../ECG.txt; sourceTree = "<group>"; };
+		23DB4AFC1845626000BA92FB /* SCG.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SCG.txt; path = ../SCG.txt; sourceTree = "<group>"; };
+		23DB4B001845629900BA92FB /* DoubleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DoubleViewController.h; path = ../DoubleViewController.h; sourceTree = "<group>"; };
+		23DB4B011845629900BA92FB /* DoubleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DoubleViewController.m; path = ../DoubleViewController.m; sourceTree = "<group>"; };
+		23DB4B021845629900BA92FB /* ECGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ECGViewController.h; path = ../ECGViewController.h; sourceTree = "<group>"; };
+		23DB4B031845629900BA92FB /* ECGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ECGViewController.m; path = ../ECGViewController.m; sourceTree = "<group>"; };
+		23DB4B041845629900BA92FB /* FileRead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileRead.h; path = ../FileRead.h; sourceTree = "<group>"; };
+		23DB4B051845629900BA92FB /* FileRead.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileRead.m; path = ../FileRead.m; sourceTree = "<group>"; };
+		23DB4B061845629900BA92FB /* OverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OverlayViewController.h; path = ../OverlayViewController.h; sourceTree = "<group>"; };
+		23DB4B071845629900BA92FB /* OverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OverlayViewController.m; path = ../OverlayViewController.m; sourceTree = "<group>"; };
+		23DB4B081845629900BA92FB /* SCGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCGViewController.h; path = ../SCGViewController.h; sourceTree = "<group>"; };
+		23DB4B091845629900BA92FB /* SCGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCGViewController.m; path = ../SCGViewController.m; sourceTree = "<group>"; };
+		23DB4B0F184562BE00BA92FB /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = ../MenuViewController.h; sourceTree = "<group>"; };
+		23DB4B10184562BE00BA92FB /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = ../MenuViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		23DB4A5C1845607600BA92FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23DB4AEA184560AF00BA92FB /* QuartzCore.framework in Frameworks */,
+				23DB4A651845607600BA92FB /* CoreGraphics.framework in Frameworks */,
+				23DB4A671845607600BA92FB /* UIKit.framework in Frameworks */,
+				23DB4A631845607600BA92FB /* Foundation.framework in Frameworks */,
+				23DB4AE81845609500BA92FB /* libCorePlot-CocoaTouch.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23DB4A7D1845607600BA92FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23DB4A821845607600BA92FB /* XCTest.framework in Frameworks */,
+				23DB4A841845607600BA92FB /* UIKit.framework in Frameworks */,
+				23DB4A831845607600BA92FB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23DB4A561845607500BA92FB = {
+			isa = PBXGroup;
+			children = (
+				23DB4A971845608200BA92FB /* CorePlot */,
+				23DB4A681845607600BA92FB /* GUItouch */,
+				23DB4A871845607600BA92FB /* GUItouchTests */,
+				23DB4A611845607600BA92FB /* Frameworks */,
+				23DB4A601845607600BA92FB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		23DB4A601845607600BA92FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23DB4A5F1845607600BA92FB /* GUItouch.app */,
+				23DB4A801845607600BA92FB /* GUItouchTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		23DB4A611845607600BA92FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23DB4AE9184560AF00BA92FB /* QuartzCore.framework */,
+				23DB4A621845607600BA92FB /* Foundation.framework */,
+				23DB4A641845607600BA92FB /* CoreGraphics.framework */,
+				23DB4A661845607600BA92FB /* UIKit.framework */,
+				23DB4A811845607600BA92FB /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		23DB4A681845607600BA92FB /* GUItouch */ = {
+			isa = PBXGroup;
+			children = (
+				23DB4A711845607600BA92FB /* AppDelegate.h */,
+				23DB4A721845607600BA92FB /* AppDelegate.m */,
+				23DB4B0F184562BE00BA92FB /* MenuViewController.h */,
+				23DB4B10184562BE00BA92FB /* MenuViewController.m */,
+				23DB4AEB1845612100BA92FB /* Main.storyboard */,
+				23DB4A7A1845607600BA92FB /* Images.xcassets */,
+				23DB4B001845629900BA92FB /* DoubleViewController.h */,
+				23DB4B011845629900BA92FB /* DoubleViewController.m */,
+				23DB4B021845629900BA92FB /* ECGViewController.h */,
+				23DB4B031845629900BA92FB /* ECGViewController.m */,
+				23DB4B081845629900BA92FB /* SCGViewController.h */,
+				23DB4B091845629900BA92FB /* SCGViewController.m */,
+				23DB4B061845629900BA92FB /* OverlayViewController.h */,
+				23DB4B071845629900BA92FB /* OverlayViewController.m */,
+				23DB4B041845629900BA92FB /* FileRead.h */,
+				23DB4B051845629900BA92FB /* FileRead.m */,
+				23DB4AF91845626000BA92FB /* Data.h */,
+				23DB4AFA1845626000BA92FB /* Data.m */,
+				23DB4AFB1845626000BA92FB /* ECG.txt */,
+				23DB4AFC1845626000BA92FB /* SCG.txt */,
+				23DB4A691845607600BA92FB /* Supporting Files */,
+			);
+			path = GUItouch;
+			sourceTree = "<group>";
+		};
+		23DB4A691845607600BA92FB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				23DB4A6A1845607600BA92FB /* GUItouch-Info.plist */,
+				23DB4A6B1845607600BA92FB /* InfoPlist.strings */,
+				23DB4A6E1845607600BA92FB /* main.m */,
+				23DB4A701845607600BA92FB /* GUItouch-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		23DB4A871845607600BA92FB /* GUItouchTests */ = {
+			isa = PBXGroup;
+			children = (
+				23DB4A8D1845607600BA92FB /* GUItouchTests.m */,
+				23DB4A881845607600BA92FB /* Supporting Files */,
+			);
+			path = GUItouchTests;
+			sourceTree = "<group>";
+		};
+		23DB4A881845607600BA92FB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				23DB4A891845607600BA92FB /* GUItouchTests-Info.plist */,
+				23DB4A8A1845607600BA92FB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		23DB4A971845608200BA92FB /* CorePlot */ = {
+			isa = PBXGroup;
+			children = (
+				23DB4A981845609500BA92FB /* CorePlotHeaders */,
+				23DB4AE71845609500BA92FB /* libCorePlot-CocoaTouch.a */,
+			);
+			name = CorePlot;
+			sourceTree = "<group>";
+		};
+		23DB4A981845609500BA92FB /* CorePlotHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				23DB4A991845609500BA92FB /* CorePlot-CocoaTouch.h */,
+				23DB4A9A1845609500BA92FB /* CPTAnimation.h */,
+				23DB4A9B1845609500BA92FB /* CPTAnimationOperation.h */,
+				23DB4A9C1845609500BA92FB /* CPTAnimationPeriod.h */,
+				23DB4A9D1845609500BA92FB /* CPTAnnotation.h */,
+				23DB4A9E1845609500BA92FB /* CPTAnnotationHostLayer.h */,
+				23DB4A9F1845609500BA92FB /* CPTAxis.h */,
+				23DB4AA01845609500BA92FB /* CPTAxisLabel.h */,
+				23DB4AA11845609500BA92FB /* CPTAxisLabelGroup.h */,
+				23DB4AA21845609500BA92FB /* CPTAxisSet.h */,
+				23DB4AA31845609500BA92FB /* CPTAxisTitle.h */,
+				23DB4AA41845609500BA92FB /* CPTBarPlot.h */,
+				23DB4AA51845609500BA92FB /* CPTBorderedLayer.h */,
+				23DB4AA61845609500BA92FB /* CPTCalendarFormatter.h */,
+				23DB4AA71845609500BA92FB /* CPTColor.h */,
+				23DB4AA81845609500BA92FB /* CPTColorSpace.h */,
+				23DB4AA91845609500BA92FB /* CPTConstraints.h */,
+				23DB4AAA1845609500BA92FB /* CPTDataSourceTestCase.h */,
+				23DB4AAB1845609500BA92FB /* CPTDefinitions.h */,
+				23DB4AAC1845609500BA92FB /* CPTDerivedXYGraph.h */,
+				23DB4AAD1845609500BA92FB /* CPTExceptions.h */,
+				23DB4AAE1845609500BA92FB /* CPTFill.h */,
+				23DB4AAF1845609500BA92FB /* CPTFunctionDataSource.h */,
+				23DB4AB01845609500BA92FB /* CPTGradient.h */,
+				23DB4AB11845609500BA92FB /* CPTGraph.h */,
+				23DB4AB21845609500BA92FB /* CPTGraphHostingView.h */,
+				23DB4AB31845609500BA92FB /* CPTGridLineGroup.h */,
+				23DB4AB41845609500BA92FB /* CPTGridLines.h */,
+				23DB4AB51845609500BA92FB /* CPTImage.h */,
+				23DB4AB61845609500BA92FB /* CPTLayer.h */,
+				23DB4AB71845609500BA92FB /* CPTLayerAnnotation.h */,
+				23DB4AB81845609500BA92FB /* CPTLegend.h */,
+				23DB4AB91845609500BA92FB /* CPTLegendEntry.h */,
+				23DB4ABA1845609500BA92FB /* CPTLimitBand.h */,
+				23DB4ABB1845609500BA92FB /* CPTLineCap.h */,
+				23DB4ABC1845609500BA92FB /* CPTLineStyle.h */,
+				23DB4ABD1845609500BA92FB /* CPTMutableLineStyle.h */,
+				23DB4ABE1845609500BA92FB /* CPTMutableNumericData+TypeConversion.h */,
+				23DB4ABF1845609500BA92FB /* CPTMutableNumericData.h */,
+				23DB4AC01845609500BA92FB /* CPTMutablePlotRange.h */,
+				23DB4AC11845609500BA92FB /* CPTMutableShadow.h */,
+				23DB4AC21845609500BA92FB /* CPTMutableTextStyle.h */,
+				23DB4AC31845609500BA92FB /* CPTNumericData+TypeConversion.h */,
+				23DB4AC41845609500BA92FB /* CPTNumericData.h */,
+				23DB4AC51845609500BA92FB /* CPTNumericDataType.h */,
+				23DB4AC61845609500BA92FB /* CPTPathExtensions.h */,
+				23DB4AC71845609500BA92FB /* CPTPieChart.h */,
+				23DB4AC81845609500BA92FB /* CPTPlatformSpecificCategories.h */,
+				23DB4AC91845609500BA92FB /* CPTPlatformSpecificDefines.h */,
+				23DB4ACA1845609500BA92FB /* CPTPlatformSpecificFunctions.h */,
+				23DB4ACB1845609500BA92FB /* CPTPlot.h */,
+				23DB4ACC1845609500BA92FB /* CPTPlotArea.h */,
+				23DB4ACD1845609500BA92FB /* CPTPlotAreaFrame.h */,
+				23DB4ACE1845609500BA92FB /* CPTPlotGroup.h */,
+				23DB4ACF1845609500BA92FB /* CPTPlotRange.h */,
+				23DB4AD01845609500BA92FB /* CPTPlotSpace.h */,
+				23DB4AD11845609500BA92FB /* CPTPlotSpaceAnnotation.h */,
+				23DB4AD21845609500BA92FB /* CPTPlotSymbol.h */,
+				23DB4AD31845609500BA92FB /* CPTRangePlot.h */,
+				23DB4AD41845609500BA92FB /* CPTResponder.h */,
+				23DB4AD51845609500BA92FB /* CPTScatterPlot.h */,
+				23DB4AD61845609500BA92FB /* CPTShadow.h */,
+				23DB4AD71845609500BA92FB /* CPTTestCase.h */,
+				23DB4AD81845609500BA92FB /* CPTTextLayer.h */,
+				23DB4AD91845609500BA92FB /* CPTTextStyle.h */,
+				23DB4ADA1845609500BA92FB /* CPTTextStylePlatformSpecific.h */,
+				23DB4ADB1845609500BA92FB /* CPTTheme.h */,
+				23DB4ADC1845609500BA92FB /* CPTTimeFormatter.h */,
+				23DB4ADD1845609500BA92FB /* CPTTradingRangePlot.h */,
+				23DB4ADE1845609500BA92FB /* CPTUtilities.h */,
+				23DB4ADF1845609500BA92FB /* CPTXYAxis.h */,
+				23DB4AE01845609500BA92FB /* CPTXYAxisSet.h */,
+				23DB4AE11845609500BA92FB /* CPTXYGraph.h */,
+				23DB4AE21845609500BA92FB /* CPTXYPlotSpace.h */,
+				23DB4AE31845609500BA92FB /* mainpage.h */,
+				23DB4AE41845609500BA92FB /* NSCoderExtensions.h */,
+				23DB4AE51845609500BA92FB /* NSDecimalNumberExtensions.h */,
+				23DB4AE61845609500BA92FB /* NSNumberExtensions.h */,
+			);
+			path = CorePlotHeaders;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		23DB4A5E1845607600BA92FB /* GUItouch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23DB4A911845607600BA92FB /* Build configuration list for PBXNativeTarget "GUItouch" */;
+			buildPhases = (
+				23DB4A5B1845607600BA92FB /* Sources */,
+				23DB4A5C1845607600BA92FB /* Frameworks */,
+				23DB4A5D1845607600BA92FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GUItouch;
+			productName = GUItouch;
+			productReference = 23DB4A5F1845607600BA92FB /* GUItouch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		23DB4A7F1845607600BA92FB /* GUItouchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23DB4A941845607600BA92FB /* Build configuration list for PBXNativeTarget "GUItouchTests" */;
+			buildPhases = (
+				23DB4A7C1845607600BA92FB /* Sources */,
+				23DB4A7D1845607600BA92FB /* Frameworks */,
+				23DB4A7E1845607600BA92FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23DB4A861845607600BA92FB /* PBXTargetDependency */,
+			);
+			name = GUItouchTests;
+			productName = GUItouchTests;
+			productReference = 23DB4A801845607600BA92FB /* GUItouchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		23DB4A571845607500BA92FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Jake Olney";
+				TargetAttributes = {
+					23DB4A7F1845607600BA92FB = {
+						TestTargetID = 23DB4A5E1845607600BA92FB;
+					};
+				};
+			};
+			buildConfigurationList = 23DB4A5A1845607500BA92FB /* Build configuration list for PBXProject "GUItouch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 23DB4A561845607500BA92FB;
+			productRefGroup = 23DB4A601845607600BA92FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				23DB4A5E1845607600BA92FB /* GUItouch */,
+				23DB4A7F1845607600BA92FB /* GUItouchTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		23DB4A5D1845607600BA92FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23DB4AFF1845626000BA92FB /* SCG.txt in Resources */,
+				23DB4AFE1845626000BA92FB /* ECG.txt in Resources */,
+				23DB4A7B1845607600BA92FB /* Images.xcassets in Resources */,
+				23DB4A6D1845607600BA92FB /* InfoPlist.strings in Resources */,
+				23DB4AEC1845612100BA92FB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23DB4A7E1845607600BA92FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23DB4A8C1845607600BA92FB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		23DB4A5B1845607600BA92FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23DB4B0A1845629900BA92FB /* DoubleViewController.m in Sources */,
+				23DB4B11184562BE00BA92FB /* MenuViewController.m in Sources */,
+				23DB4B0B1845629900BA92FB /* ECGViewController.m in Sources */,
+				23DB4B0D1845629900BA92FB /* OverlayViewController.m in Sources */,
+				23DB4B0C1845629900BA92FB /* FileRead.m in Sources */,
+				23DB4AFD1845626000BA92FB /* Data.m in Sources */,
+				23DB4B0E1845629900BA92FB /* SCGViewController.m in Sources */,
+				23DB4A731845607600BA92FB /* AppDelegate.m in Sources */,
+				23DB4A6F1845607600BA92FB /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23DB4A7C1845607600BA92FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23DB4A8E1845607600BA92FB /* GUItouchTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		23DB4A861845607600BA92FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23DB4A5E1845607600BA92FB /* GUItouch */;
+			targetProxy = 23DB4A851845607600BA92FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		23DB4A6B1845607600BA92FB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				23DB4A6C1845607600BA92FB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		23DB4A8A1845607600BA92FB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				23DB4A8B1845607600BA92FB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		23DB4A8F1845607600BA92FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		23DB4A901845607600BA92FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		23DB4A921845607600BA92FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GUItouch/GUItouch-Prefix.pch";
+				INFOPLIST_FILE = "GUItouch/GUItouch-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Jake/Documents/EECE\\ 409/Xcode\\ Tutorials/GUItouch",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		23DB4A931845607600BA92FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GUItouch/GUItouch-Prefix.pch";
+				INFOPLIST_FILE = "GUItouch/GUItouch-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Jake/Documents/EECE\\ 409/Xcode\\ Tutorials/GUItouch",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		23DB4A951845607600BA92FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GUItouch.app/GUItouch";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GUItouch/GUItouch-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "GUItouchTests/GUItouchTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		23DB4A961845607600BA92FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GUItouch.app/GUItouch";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GUItouch/GUItouch-Prefix.pch";
+				INFOPLIST_FILE = "GUItouchTests/GUItouchTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		23DB4A5A1845607500BA92FB /* Build configuration list for PBXProject "GUItouch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23DB4A8F1845607600BA92FB /* Debug */,
+				23DB4A901845607600BA92FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23DB4A911845607600BA92FB /* Build configuration list for PBXNativeTarget "GUItouch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23DB4A921845607600BA92FB /* Debug */,
+				23DB4A931845607600BA92FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		23DB4A941845607600BA92FB /* Build configuration list for PBXNativeTarget "GUItouchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23DB4A951845607600BA92FB /* Debug */,
+				23DB4A961845607600BA92FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 23DB4A571845607500BA92FB /* Project object */;
+}

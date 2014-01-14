@@ -1,0 +1,733 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23DB4B1F1847E08C00BA92FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23DB4B1E1847E08C00BA92FB /* Foundation.framework */; };
+		23DB4B211847E08C00BA92FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23DB4B201847E08C00BA92FB /* CoreGraphics.framework */; };
+		23DB4B231847E08C00BA92FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23DB4B221847E08C00BA92FB /* UIKit.framework */; };
+		23DB4B291847E08C00BA92FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23DB4B271847E08C00BA92FB /* InfoPlist.strings */; };
+		23DB4B2B1847E08C00BA92FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB4B2A1847E08C00BA92FB /* main.m */; };
+		23DB4B2F1847E08C00BA92FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB4B2E1847E08C00BA92FB /* AppDelegate.m */; };
+		23DB4B371847E08C00BA92FB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23DB4B361847E08C00BA92FB /* Images.xcassets */; };
+		23DB4B3E1847E08C00BA92FB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23DB4B3D1847E08C00BA92FB /* XCTest.framework */; };
+		23DB4B3F1847E08C00BA92FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23DB4B1E1847E08C00BA92FB /* Foundation.framework */; };
+		23DB4B401847E08C00BA92FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23DB4B221847E08C00BA92FB /* UIKit.framework */; };
+		23DB4B481847E08C00BA92FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23DB4B461847E08C00BA92FB /* InfoPlist.strings */; };
+		23DB4B4A1847E08C00BA92FB /* IntegratedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB4B491847E08C00BA92FB /* IntegratedTests.m */; };
+		23DB4BA41847E17700BA92FB /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23DB4BA31847E17700BA92FB /* libCorePlot-CocoaTouch.a */; };
+		23DB4BB71847E21100BA92FB /* AudioQueueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB4BA71847E21100BA92FB /* AudioQueueObject.m */; };
+		23DB4BB81847E21100BA92FB /* AudioSignalAnalyzer.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB4BA91847E21100BA92FB /* AudioSignalAnalyzer.m */; };
+		23DB4BB91847E21100BA92FB /* AudioSignalGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB4BAB1847E21100BA92FB /* AudioSignalGenerator.m */; };
+		23DB4BBA1847E21100BA92FB /* FSKRecognizer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23DB4BB01847E21100BA92FB /* FSKRecognizer.mm */; };
+		23DB4BBB1847E21100BA92FB /* FSKSerialGenerator.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23DB4BB21847E21100BA92FB /* FSKSerialGenerator.mm */; };
+		23DB4BBC1847E21100BA92FB /* MultiDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB4BB51847E21100BA92FB /* MultiDelegate.m */; settings = {COMPILER_FLAGS = "-fno-obj-arc"; }; };
+		23DB4BC81847E30D00BA92FB /* ECGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB4BC01847E30D00BA92FB /* ECGViewController.m */; };
+		23DB4BC91847E30D00BA92FB /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB4BC21847E30D00BA92FB /* MenuViewController.m */; };
+		23DB4BCD1847E36300BA92FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23DB4BCC1847E36300BA92FB /* Main.storyboard */; };
+		23DB4BD21847E58000BA92FB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23DB4BCF1847E58000BA92FB /* AudioToolbox.framework */; };
+		23DB4BD31847E58000BA92FB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23DB4BD01847E58000BA92FB /* AVFoundation.framework */; };
+		23DB4BD41847E58000BA92FB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23DB4BD11847E58000BA92FB /* QuartzCore.framework */; };
+		23DB4BD71847EC0400BA92FB /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB4BD61847EC0400BA92FB /* Data.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		23DB4B411847E08C00BA92FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23DB4B131847E08C00BA92FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23DB4B1A1847E08C00BA92FB;
+			remoteInfo = Integrated;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		23DB4B1B1847E08C00BA92FB /* Integrated.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Integrated.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		23DB4B1E1847E08C00BA92FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		23DB4B201847E08C00BA92FB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		23DB4B221847E08C00BA92FB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		23DB4B261847E08C00BA92FB /* Integrated-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Integrated-Info.plist"; sourceTree = "<group>"; };
+		23DB4B281847E08C00BA92FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		23DB4B2A1847E08C00BA92FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		23DB4B2C1847E08C00BA92FB /* Integrated-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Integrated-Prefix.pch"; sourceTree = "<group>"; };
+		23DB4B2D1847E08C00BA92FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		23DB4B2E1847E08C00BA92FB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		23DB4B361847E08C00BA92FB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		23DB4B3C1847E08C00BA92FB /* IntegratedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntegratedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		23DB4B3D1847E08C00BA92FB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		23DB4B451847E08C00BA92FB /* IntegratedTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IntegratedTests-Info.plist"; sourceTree = "<group>"; };
+		23DB4B471847E08C00BA92FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		23DB4B491847E08C00BA92FB /* IntegratedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntegratedTests.m; sourceTree = "<group>"; };
+		23DB4B551847E17600BA92FB /* CorePlot-CocoaTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CorePlot-CocoaTouch.h"; sourceTree = "<group>"; };
+		23DB4B561847E17600BA92FB /* CPTAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTAnimation.h; sourceTree = "<group>"; };
+		23DB4B571847E17600BA92FB /* CPTAnimationOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTAnimationOperation.h; sourceTree = "<group>"; };
+		23DB4B581847E17600BA92FB /* CPTAnimationPeriod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTAnimationPeriod.h; sourceTree = "<group>"; };
+		23DB4B591847E17600BA92FB /* CPTAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTAnnotation.h; sourceTree = "<group>"; };
+		23DB4B5A1847E17600BA92FB /* CPTAnnotationHostLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTAnnotationHostLayer.h; sourceTree = "<group>"; };
+		23DB4B5B1847E17600BA92FB /* CPTAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTAxis.h; sourceTree = "<group>"; };
+		23DB4B5C1847E17600BA92FB /* CPTAxisLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTAxisLabel.h; sourceTree = "<group>"; };
+		23DB4B5D1847E17600BA92FB /* CPTAxisLabelGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTAxisLabelGroup.h; sourceTree = "<group>"; };
+		23DB4B5E1847E17600BA92FB /* CPTAxisSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTAxisSet.h; sourceTree = "<group>"; };
+		23DB4B5F1847E17600BA92FB /* CPTAxisTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTAxisTitle.h; sourceTree = "<group>"; };
+		23DB4B601847E17600BA92FB /* CPTBarPlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTBarPlot.h; sourceTree = "<group>"; };
+		23DB4B611847E17600BA92FB /* CPTBorderedLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTBorderedLayer.h; sourceTree = "<group>"; };
+		23DB4B621847E17600BA92FB /* CPTCalendarFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTCalendarFormatter.h; sourceTree = "<group>"; };
+		23DB4B631847E17600BA92FB /* CPTColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTColor.h; sourceTree = "<group>"; };
+		23DB4B641847E17600BA92FB /* CPTColorSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTColorSpace.h; sourceTree = "<group>"; };
+		23DB4B651847E17600BA92FB /* CPTConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTConstraints.h; sourceTree = "<group>"; };
+		23DB4B661847E17600BA92FB /* CPTDataSourceTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTDataSourceTestCase.h; sourceTree = "<group>"; };
+		23DB4B671847E17600BA92FB /* CPTDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTDefinitions.h; sourceTree = "<group>"; };
+		23DB4B681847E17600BA92FB /* CPTDerivedXYGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTDerivedXYGraph.h; sourceTree = "<group>"; };
+		23DB4B691847E17600BA92FB /* CPTExceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTExceptions.h; sourceTree = "<group>"; };
+		23DB4B6A1847E17600BA92FB /* CPTFill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTFill.h; sourceTree = "<group>"; };
+		23DB4B6B1847E17600BA92FB /* CPTFunctionDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTFunctionDataSource.h; sourceTree = "<group>"; };
+		23DB4B6C1847E17600BA92FB /* CPTGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTGradient.h; sourceTree = "<group>"; };
+		23DB4B6D1847E17600BA92FB /* CPTGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTGraph.h; sourceTree = "<group>"; };
+		23DB4B6E1847E17600BA92FB /* CPTGraphHostingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTGraphHostingView.h; sourceTree = "<group>"; };
+		23DB4B6F1847E17600BA92FB /* CPTGridLineGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTGridLineGroup.h; sourceTree = "<group>"; };
+		23DB4B701847E17600BA92FB /* CPTGridLines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTGridLines.h; sourceTree = "<group>"; };
+		23DB4B711847E17600BA92FB /* CPTImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTImage.h; sourceTree = "<group>"; };
+		23DB4B721847E17600BA92FB /* CPTLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTLayer.h; sourceTree = "<group>"; };
+		23DB4B731847E17600BA92FB /* CPTLayerAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTLayerAnnotation.h; sourceTree = "<group>"; };
+		23DB4B741847E17600BA92FB /* CPTLegend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTLegend.h; sourceTree = "<group>"; };
+		23DB4B751847E17600BA92FB /* CPTLegendEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTLegendEntry.h; sourceTree = "<group>"; };
+		23DB4B761847E17600BA92FB /* CPTLimitBand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTLimitBand.h; sourceTree = "<group>"; };
+		23DB4B771847E17600BA92FB /* CPTLineCap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTLineCap.h; sourceTree = "<group>"; };
+		23DB4B781847E17600BA92FB /* CPTLineStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTLineStyle.h; sourceTree = "<group>"; };
+		23DB4B791847E17600BA92FB /* CPTMutableLineStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTMutableLineStyle.h; sourceTree = "<group>"; };
+		23DB4B7A1847E17600BA92FB /* CPTMutableNumericData+TypeConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CPTMutableNumericData+TypeConversion.h"; sourceTree = "<group>"; };
+		23DB4B7B1847E17600BA92FB /* CPTMutableNumericData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTMutableNumericData.h; sourceTree = "<group>"; };
+		23DB4B7C1847E17600BA92FB /* CPTMutablePlotRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTMutablePlotRange.h; sourceTree = "<group>"; };
+		23DB4B7D1847E17600BA92FB /* CPTMutableShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTMutableShadow.h; sourceTree = "<group>"; };
+		23DB4B7E1847E17600BA92FB /* CPTMutableTextStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTMutableTextStyle.h; sourceTree = "<group>"; };
+		23DB4B7F1847E17600BA92FB /* CPTNumericData+TypeConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CPTNumericData+TypeConversion.h"; sourceTree = "<group>"; };
+		23DB4B801847E17600BA92FB /* CPTNumericData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTNumericData.h; sourceTree = "<group>"; };
+		23DB4B811847E17600BA92FB /* CPTNumericDataType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTNumericDataType.h; sourceTree = "<group>"; };
+		23DB4B821847E17600BA92FB /* CPTPathExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTPathExtensions.h; sourceTree = "<group>"; };
+		23DB4B831847E17600BA92FB /* CPTPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTPieChart.h; sourceTree = "<group>"; };
+		23DB4B841847E17700BA92FB /* CPTPlatformSpecificCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTPlatformSpecificCategories.h; sourceTree = "<group>"; };
+		23DB4B851847E17700BA92FB /* CPTPlatformSpecificDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTPlatformSpecificDefines.h; sourceTree = "<group>"; };
+		23DB4B861847E17700BA92FB /* CPTPlatformSpecificFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTPlatformSpecificFunctions.h; sourceTree = "<group>"; };
+		23DB4B871847E17700BA92FB /* CPTPlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTPlot.h; sourceTree = "<group>"; };
+		23DB4B881847E17700BA92FB /* CPTPlotArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTPlotArea.h; sourceTree = "<group>"; };
+		23DB4B891847E17700BA92FB /* CPTPlotAreaFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTPlotAreaFrame.h; sourceTree = "<group>"; };
+		23DB4B8A1847E17700BA92FB /* CPTPlotGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTPlotGroup.h; sourceTree = "<group>"; };
+		23DB4B8B1847E17700BA92FB /* CPTPlotRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTPlotRange.h; sourceTree = "<group>"; };
+		23DB4B8C1847E17700BA92FB /* CPTPlotSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTPlotSpace.h; sourceTree = "<group>"; };
+		23DB4B8D1847E17700BA92FB /* CPTPlotSpaceAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTPlotSpaceAnnotation.h; sourceTree = "<group>"; };
+		23DB4B8E1847E17700BA92FB /* CPTPlotSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTPlotSymbol.h; sourceTree = "<group>"; };
+		23DB4B8F1847E17700BA92FB /* CPTRangePlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTRangePlot.h; sourceTree = "<group>"; };
+		23DB4B901847E17700BA92FB /* CPTResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTResponder.h; sourceTree = "<group>"; };
+		23DB4B911847E17700BA92FB /* CPTScatterPlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTScatterPlot.h; sourceTree = "<group>"; };
+		23DB4B921847E17700BA92FB /* CPTShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTShadow.h; sourceTree = "<group>"; };
+		23DB4B931847E17700BA92FB /* CPTTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTTestCase.h; sourceTree = "<group>"; };
+		23DB4B941847E17700BA92FB /* CPTTextLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTTextLayer.h; sourceTree = "<group>"; };
+		23DB4B951847E17700BA92FB /* CPTTextStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTTextStyle.h; sourceTree = "<group>"; };
+		23DB4B961847E17700BA92FB /* CPTTextStylePlatformSpecific.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTTextStylePlatformSpecific.h; sourceTree = "<group>"; };
+		23DB4B971847E17700BA92FB /* CPTTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTTheme.h; sourceTree = "<group>"; };
+		23DB4B981847E17700BA92FB /* CPTTimeFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTTimeFormatter.h; sourceTree = "<group>"; };
+		23DB4B991847E17700BA92FB /* CPTTradingRangePlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTTradingRangePlot.h; sourceTree = "<group>"; };
+		23DB4B9A1847E17700BA92FB /* CPTUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTUtilities.h; sourceTree = "<group>"; };
+		23DB4B9B1847E17700BA92FB /* CPTXYAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTXYAxis.h; sourceTree = "<group>"; };
+		23DB4B9C1847E17700BA92FB /* CPTXYAxisSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTXYAxisSet.h; sourceTree = "<group>"; };
+		23DB4B9D1847E17700BA92FB /* CPTXYGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTXYGraph.h; sourceTree = "<group>"; };
+		23DB4B9E1847E17700BA92FB /* CPTXYPlotSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTXYPlotSpace.h; sourceTree = "<group>"; };
+		23DB4B9F1847E17700BA92FB /* mainpage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mainpage.h; sourceTree = "<group>"; };
+		23DB4BA01847E17700BA92FB /* NSCoderExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCoderExtensions.h; sourceTree = "<group>"; };
+		23DB4BA11847E17700BA92FB /* NSDecimalNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDecimalNumberExtensions.h; sourceTree = "<group>"; };
+		23DB4BA21847E17700BA92FB /* NSNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberExtensions.h; sourceTree = "<group>"; };
+		23DB4BA31847E17700BA92FB /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
+		23DB4BA61847E21100BA92FB /* AudioQueueObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioQueueObject.h; sourceTree = "<group>"; };
+		23DB4BA71847E21100BA92FB /* AudioQueueObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioQueueObject.m; sourceTree = "<group>"; };
+		23DB4BA81847E21100BA92FB /* AudioSignalAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioSignalAnalyzer.h; sourceTree = "<group>"; };
+		23DB4BA91847E21100BA92FB /* AudioSignalAnalyzer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioSignalAnalyzer.m; sourceTree = "<group>"; };
+		23DB4BAA1847E21100BA92FB /* AudioSignalGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioSignalGenerator.h; sourceTree = "<group>"; };
+		23DB4BAB1847E21100BA92FB /* AudioSignalGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioSignalGenerator.m; sourceTree = "<group>"; };
+		23DB4BAC1847E21100BA92FB /* CharReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharReceiver.h; sourceTree = "<group>"; };
+		23DB4BAD1847E21100BA92FB /* FSKByteQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSKByteQueue.h; sourceTree = "<group>"; };
+		23DB4BAE1847E21100BA92FB /* FSKModemConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSKModemConfig.h; sourceTree = "<group>"; };
+		23DB4BAF1847E21100BA92FB /* FSKRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSKRecognizer.h; sourceTree = "<group>"; };
+		23DB4BB01847E21100BA92FB /* FSKRecognizer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FSKRecognizer.mm; sourceTree = "<group>"; };
+		23DB4BB11847E21100BA92FB /* FSKSerialGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSKSerialGenerator.h; sourceTree = "<group>"; };
+		23DB4BB21847E21100BA92FB /* FSKSerialGenerator.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FSKSerialGenerator.mm; sourceTree = "<group>"; };
+		23DB4BB31847E21100BA92FB /* lockfree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lockfree.h; sourceTree = "<group>"; };
+		23DB4BB41847E21100BA92FB /* MultiDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiDelegate.h; sourceTree = "<group>"; };
+		23DB4BB51847E21100BA92FB /* MultiDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiDelegate.m; sourceTree = "<group>"; };
+		23DB4BB61847E21100BA92FB /* PatternRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatternRecognizer.h; sourceTree = "<group>"; };
+		23DB4BBF1847E30D00BA92FB /* ECGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ECGViewController.h; path = ../ECGViewController.h; sourceTree = "<group>"; };
+		23DB4BC01847E30D00BA92FB /* ECGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ECGViewController.m; path = ../ECGViewController.m; sourceTree = "<group>"; };
+		23DB4BC11847E30D00BA92FB /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = ../MenuViewController.h; sourceTree = "<group>"; };
+		23DB4BC21847E30D00BA92FB /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = ../MenuViewController.m; sourceTree = "<group>"; };
+		23DB4BCC1847E36300BA92FB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
+		23DB4BCE1847E52500BA92FB /* SensorSerialProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorSerialProtocol.h; path = ../SensorSerialProtocol.h; sourceTree = "<group>"; };
+		23DB4BCF1847E58000BA92FB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		23DB4BD01847E58000BA92FB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		23DB4BD11847E58000BA92FB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		23DB4BD51847EC0400BA92FB /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Data.h; path = ../Data.h; sourceTree = "<group>"; };
+		23DB4BD61847EC0400BA92FB /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Data.m; path = ../Data.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		23DB4B181847E08C00BA92FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23DB4BD21847E58000BA92FB /* AudioToolbox.framework in Frameworks */,
+				23DB4BD31847E58000BA92FB /* AVFoundation.framework in Frameworks */,
+				23DB4BD41847E58000BA92FB /* QuartzCore.framework in Frameworks */,
+				23DB4B211847E08C00BA92FB /* CoreGraphics.framework in Frameworks */,
+				23DB4B231847E08C00BA92FB /* UIKit.framework in Frameworks */,
+				23DB4B1F1847E08C00BA92FB /* Foundation.framework in Frameworks */,
+				23DB4BA41847E17700BA92FB /* libCorePlot-CocoaTouch.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23DB4B391847E08C00BA92FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23DB4B3E1847E08C00BA92FB /* XCTest.framework in Frameworks */,
+				23DB4B401847E08C00BA92FB /* UIKit.framework in Frameworks */,
+				23DB4B3F1847E08C00BA92FB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23DB4B121847E08C00BA92FB = {
+			isa = PBXGroup;
+			children = (
+				23DB4BA51847E17E00BA92FB /* SoftModem */,
+				23DB4B531847E12C00BA92FB /* CorePlot */,
+				23DB4B241847E08C00BA92FB /* Integrated */,
+				23DB4B431847E08C00BA92FB /* IntegratedTests */,
+				23DB4B1D1847E08C00BA92FB /* Frameworks */,
+				23DB4B1C1847E08C00BA92FB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		23DB4B1C1847E08C00BA92FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23DB4B1B1847E08C00BA92FB /* Integrated.app */,
+				23DB4B3C1847E08C00BA92FB /* IntegratedTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		23DB4B1D1847E08C00BA92FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23DB4BCF1847E58000BA92FB /* AudioToolbox.framework */,
+				23DB4BD01847E58000BA92FB /* AVFoundation.framework */,
+				23DB4BD11847E58000BA92FB /* QuartzCore.framework */,
+				23DB4B1E1847E08C00BA92FB /* Foundation.framework */,
+				23DB4B201847E08C00BA92FB /* CoreGraphics.framework */,
+				23DB4B221847E08C00BA92FB /* UIKit.framework */,
+				23DB4B3D1847E08C00BA92FB /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		23DB4B241847E08C00BA92FB /* Integrated */ = {
+			isa = PBXGroup;
+			children = (
+				23DB4B2D1847E08C00BA92FB /* AppDelegate.h */,
+				23DB4B2E1847E08C00BA92FB /* AppDelegate.m */,
+				23DB4BCC1847E36300BA92FB /* Main.storyboard */,
+				23DB4B361847E08C00BA92FB /* Images.xcassets */,
+				23DB4BBF1847E30D00BA92FB /* ECGViewController.h */,
+				23DB4BC01847E30D00BA92FB /* ECGViewController.m */,
+				23DB4BC11847E30D00BA92FB /* MenuViewController.h */,
+				23DB4BC21847E30D00BA92FB /* MenuViewController.m */,
+				23DB4BCE1847E52500BA92FB /* SensorSerialProtocol.h */,
+				23DB4BD51847EC0400BA92FB /* Data.h */,
+				23DB4BD61847EC0400BA92FB /* Data.m */,
+				23DB4B251847E08C00BA92FB /* Supporting Files */,
+			);
+			path = Integrated;
+			sourceTree = "<group>";
+		};
+		23DB4B251847E08C00BA92FB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				23DB4B261847E08C00BA92FB /* Integrated-Info.plist */,
+				23DB4B271847E08C00BA92FB /* InfoPlist.strings */,
+				23DB4B2A1847E08C00BA92FB /* main.m */,
+				23DB4B2C1847E08C00BA92FB /* Integrated-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		23DB4B431847E08C00BA92FB /* IntegratedTests */ = {
+			isa = PBXGroup;
+			children = (
+				23DB4B491847E08C00BA92FB /* IntegratedTests.m */,
+				23DB4B441847E08C00BA92FB /* Supporting Files */,
+			);
+			path = IntegratedTests;
+			sourceTree = "<group>";
+		};
+		23DB4B441847E08C00BA92FB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				23DB4B451847E08C00BA92FB /* IntegratedTests-Info.plist */,
+				23DB4B461847E08C00BA92FB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		23DB4B531847E12C00BA92FB /* CorePlot */ = {
+			isa = PBXGroup;
+			children = (
+				23DB4B541847E17600BA92FB /* CorePlotHeaders */,
+				23DB4BA31847E17700BA92FB /* libCorePlot-CocoaTouch.a */,
+			);
+			name = CorePlot;
+			sourceTree = "<group>";
+		};
+		23DB4B541847E17600BA92FB /* CorePlotHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				23DB4B551847E17600BA92FB /* CorePlot-CocoaTouch.h */,
+				23DB4B561847E17600BA92FB /* CPTAnimation.h */,
+				23DB4B571847E17600BA92FB /* CPTAnimationOperation.h */,
+				23DB4B581847E17600BA92FB /* CPTAnimationPeriod.h */,
+				23DB4B591847E17600BA92FB /* CPTAnnotation.h */,
+				23DB4B5A1847E17600BA92FB /* CPTAnnotationHostLayer.h */,
+				23DB4B5B1847E17600BA92FB /* CPTAxis.h */,
+				23DB4B5C1847E17600BA92FB /* CPTAxisLabel.h */,
+				23DB4B5D1847E17600BA92FB /* CPTAxisLabelGroup.h */,
+				23DB4B5E1847E17600BA92FB /* CPTAxisSet.h */,
+				23DB4B5F1847E17600BA92FB /* CPTAxisTitle.h */,
+				23DB4B601847E17600BA92FB /* CPTBarPlot.h */,
+				23DB4B611847E17600BA92FB /* CPTBorderedLayer.h */,
+				23DB4B621847E17600BA92FB /* CPTCalendarFormatter.h */,
+				23DB4B631847E17600BA92FB /* CPTColor.h */,
+				23DB4B641847E17600BA92FB /* CPTColorSpace.h */,
+				23DB4B651847E17600BA92FB /* CPTConstraints.h */,
+				23DB4B661847E17600BA92FB /* CPTDataSourceTestCase.h */,
+				23DB4B671847E17600BA92FB /* CPTDefinitions.h */,
+				23DB4B681847E17600BA92FB /* CPTDerivedXYGraph.h */,
+				23DB4B691847E17600BA92FB /* CPTExceptions.h */,
+				23DB4B6A1847E17600BA92FB /* CPTFill.h */,
+				23DB4B6B1847E17600BA92FB /* CPTFunctionDataSource.h */,
+				23DB4B6C1847E17600BA92FB /* CPTGradient.h */,
+				23DB4B6D1847E17600BA92FB /* CPTGraph.h */,
+				23DB4B6E1847E17600BA92FB /* CPTGraphHostingView.h */,
+				23DB4B6F1847E17600BA92FB /* CPTGridLineGroup.h */,
+				23DB4B701847E17600BA92FB /* CPTGridLines.h */,
+				23DB4B711847E17600BA92FB /* CPTImage.h */,
+				23DB4B721847E17600BA92FB /* CPTLayer.h */,
+				23DB4B731847E17600BA92FB /* CPTLayerAnnotation.h */,
+				23DB4B741847E17600BA92FB /* CPTLegend.h */,
+				23DB4B751847E17600BA92FB /* CPTLegendEntry.h */,
+				23DB4B761847E17600BA92FB /* CPTLimitBand.h */,
+				23DB4B771847E17600BA92FB /* CPTLineCap.h */,
+				23DB4B781847E17600BA92FB /* CPTLineStyle.h */,
+				23DB4B791847E17600BA92FB /* CPTMutableLineStyle.h */,
+				23DB4B7A1847E17600BA92FB /* CPTMutableNumericData+TypeConversion.h */,
+				23DB4B7B1847E17600BA92FB /* CPTMutableNumericData.h */,
+				23DB4B7C1847E17600BA92FB /* CPTMutablePlotRange.h */,
+				23DB4B7D1847E17600BA92FB /* CPTMutableShadow.h */,
+				23DB4B7E1847E17600BA92FB /* CPTMutableTextStyle.h */,
+				23DB4B7F1847E17600BA92FB /* CPTNumericData+TypeConversion.h */,
+				23DB4B801847E17600BA92FB /* CPTNumericData.h */,
+				23DB4B811847E17600BA92FB /* CPTNumericDataType.h */,
+				23DB4B821847E17600BA92FB /* CPTPathExtensions.h */,
+				23DB4B831847E17600BA92FB /* CPTPieChart.h */,
+				23DB4B841847E17700BA92FB /* CPTPlatformSpecificCategories.h */,
+				23DB4B851847E17700BA92FB /* CPTPlatformSpecificDefines.h */,
+				23DB4B861847E17700BA92FB /* CPTPlatformSpecificFunctions.h */,
+				23DB4B871847E17700BA92FB /* CPTPlot.h */,
+				23DB4B881847E17700BA92FB /* CPTPlotArea.h */,
+				23DB4B891847E17700BA92FB /* CPTPlotAreaFrame.h */,
+				23DB4B8A1847E17700BA92FB /* CPTPlotGroup.h */,
+				23DB4B8B1847E17700BA92FB /* CPTPlotRange.h */,
+				23DB4B8C1847E17700BA92FB /* CPTPlotSpace.h */,
+				23DB4B8D1847E17700BA92FB /* CPTPlotSpaceAnnotation.h */,
+				23DB4B8E1847E17700BA92FB /* CPTPlotSymbol.h */,
+				23DB4B8F1847E17700BA92FB /* CPTRangePlot.h */,
+				23DB4B901847E17700BA92FB /* CPTResponder.h */,
+				23DB4B911847E17700BA92FB /* CPTScatterPlot.h */,
+				23DB4B921847E17700BA92FB /* CPTShadow.h */,
+				23DB4B931847E17700BA92FB /* CPTTestCase.h */,
+				23DB4B941847E17700BA92FB /* CPTTextLayer.h */,
+				23DB4B951847E17700BA92FB /* CPTTextStyle.h */,
+				23DB4B961847E17700BA92FB /* CPTTextStylePlatformSpecific.h */,
+				23DB4B971847E17700BA92FB /* CPTTheme.h */,
+				23DB4B981847E17700BA92FB /* CPTTimeFormatter.h */,
+				23DB4B991847E17700BA92FB /* CPTTradingRangePlot.h */,
+				23DB4B9A1847E17700BA92FB /* CPTUtilities.h */,
+				23DB4B9B1847E17700BA92FB /* CPTXYAxis.h */,
+				23DB4B9C1847E17700BA92FB /* CPTXYAxisSet.h */,
+				23DB4B9D1847E17700BA92FB /* CPTXYGraph.h */,
+				23DB4B9E1847E17700BA92FB /* CPTXYPlotSpace.h */,
+				23DB4B9F1847E17700BA92FB /* mainpage.h */,
+				23DB4BA01847E17700BA92FB /* NSCoderExtensions.h */,
+				23DB4BA11847E17700BA92FB /* NSDecimalNumberExtensions.h */,
+				23DB4BA21847E17700BA92FB /* NSNumberExtensions.h */,
+			);
+			path = CorePlotHeaders;
+			sourceTree = "<group>";
+		};
+		23DB4BA51847E17E00BA92FB /* SoftModem */ = {
+			isa = PBXGroup;
+			children = (
+				23DB4BA61847E21100BA92FB /* AudioQueueObject.h */,
+				23DB4BA71847E21100BA92FB /* AudioQueueObject.m */,
+				23DB4BA81847E21100BA92FB /* AudioSignalAnalyzer.h */,
+				23DB4BA91847E21100BA92FB /* AudioSignalAnalyzer.m */,
+				23DB4BAA1847E21100BA92FB /* AudioSignalGenerator.h */,
+				23DB4BAB1847E21100BA92FB /* AudioSignalGenerator.m */,
+				23DB4BAC1847E21100BA92FB /* CharReceiver.h */,
+				23DB4BAD1847E21100BA92FB /* FSKByteQueue.h */,
+				23DB4BAE1847E21100BA92FB /* FSKModemConfig.h */,
+				23DB4BAF1847E21100BA92FB /* FSKRecognizer.h */,
+				23DB4BB01847E21100BA92FB /* FSKRecognizer.mm */,
+				23DB4BB11847E21100BA92FB /* FSKSerialGenerator.h */,
+				23DB4BB21847E21100BA92FB /* FSKSerialGenerator.mm */,
+				23DB4BB31847E21100BA92FB /* lockfree.h */,
+				23DB4BB41847E21100BA92FB /* MultiDelegate.h */,
+				23DB4BB51847E21100BA92FB /* MultiDelegate.m */,
+				23DB4BB61847E21100BA92FB /* PatternRecognizer.h */,
+			);
+			name = SoftModem;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		23DB4B1A1847E08C00BA92FB /* Integrated */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23DB4B4D1847E08C00BA92FB /* Build configuration list for PBXNativeTarget "Integrated" */;
+			buildPhases = (
+				23DB4B171847E08C00BA92FB /* Sources */,
+				23DB4B181847E08C00BA92FB /* Frameworks */,
+				23DB4B191847E08C00BA92FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Integrated;
+			productName = Integrated;
+			productReference = 23DB4B1B1847E08C00BA92FB /* Integrated.app */;
+			productType = "com.apple.product-type.application";
+		};
+		23DB4B3B1847E08C00BA92FB /* IntegratedTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23DB4B501847E08C00BA92FB /* Build configuration list for PBXNativeTarget "IntegratedTests" */;
+			buildPhases = (
+				23DB4B381847E08C00BA92FB /* Sources */,
+				23DB4B391847E08C00BA92FB /* Frameworks */,
+				23DB4B3A1847E08C00BA92FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23DB4B421847E08C00BA92FB /* PBXTargetDependency */,
+			);
+			name = IntegratedTests;
+			productName = IntegratedTests;
+			productReference = 23DB4B3C1847E08C00BA92FB /* IntegratedTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		23DB4B131847E08C00BA92FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Jake Olney";
+				TargetAttributes = {
+					23DB4B3B1847E08C00BA92FB = {
+						TestTargetID = 23DB4B1A1847E08C00BA92FB;
+					};
+				};
+			};
+			buildConfigurationList = 23DB4B161847E08C00BA92FB /* Build configuration list for PBXProject "Integrated" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 23DB4B121847E08C00BA92FB;
+			productRefGroup = 23DB4B1C1847E08C00BA92FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				23DB4B1A1847E08C00BA92FB /* Integrated */,
+				23DB4B3B1847E08C00BA92FB /* IntegratedTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		23DB4B191847E08C00BA92FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23DB4BCD1847E36300BA92FB /* Main.storyboard in Resources */,
+				23DB4B371847E08C00BA92FB /* Images.xcassets in Resources */,
+				23DB4B291847E08C00BA92FB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23DB4B3A1847E08C00BA92FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23DB4B481847E08C00BA92FB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		23DB4B171847E08C00BA92FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23DB4BBB1847E21100BA92FB /* FSKSerialGenerator.mm in Sources */,
+				23DB4BBC1847E21100BA92FB /* MultiDelegate.m in Sources */,
+				23DB4BC81847E30D00BA92FB /* ECGViewController.m in Sources */,
+				23DB4BBA1847E21100BA92FB /* FSKRecognizer.mm in Sources */,
+				23DB4B2F1847E08C00BA92FB /* AppDelegate.m in Sources */,
+				23DB4B2B1847E08C00BA92FB /* main.m in Sources */,
+				23DB4BB71847E21100BA92FB /* AudioQueueObject.m in Sources */,
+				23DB4BB91847E21100BA92FB /* AudioSignalGenerator.m in Sources */,
+				23DB4BD71847EC0400BA92FB /* Data.m in Sources */,
+				23DB4BC91847E30D00BA92FB /* MenuViewController.m in Sources */,
+				23DB4BB81847E21100BA92FB /* AudioSignalAnalyzer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23DB4B381847E08C00BA92FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23DB4B4A1847E08C00BA92FB /* IntegratedTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		23DB4B421847E08C00BA92FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23DB4B1A1847E08C00BA92FB /* Integrated */;
+			targetProxy = 23DB4B411847E08C00BA92FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		23DB4B271847E08C00BA92FB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				23DB4B281847E08C00BA92FB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		23DB4B461847E08C00BA92FB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				23DB4B471847E08C00BA92FB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		23DB4B4B1847E08C00BA92FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		23DB4B4C1847E08C00BA92FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		23DB4B4E1847E08C00BA92FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Integrated/Integrated-Prefix.pch";
+				INFOPLIST_FILE = "Integrated/Integrated-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Jake/Documents/EECE\\ 409/Xcode\\ Tutorials/Integrated",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		23DB4B4F1847E08C00BA92FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Integrated/Integrated-Prefix.pch";
+				INFOPLIST_FILE = "Integrated/Integrated-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Jake/Documents/EECE\\ 409/Xcode\\ Tutorials/Integrated",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		23DB4B511847E08C00BA92FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Integrated.app/Integrated";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Integrated/Integrated-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "IntegratedTests/IntegratedTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		23DB4B521847E08C00BA92FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Integrated.app/Integrated";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Integrated/Integrated-Prefix.pch";
+				INFOPLIST_FILE = "IntegratedTests/IntegratedTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		23DB4B161847E08C00BA92FB /* Build configuration list for PBXProject "Integrated" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23DB4B4B1847E08C00BA92FB /* Debug */,
+				23DB4B4C1847E08C00BA92FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23DB4B4D1847E08C00BA92FB /* Build configuration list for PBXNativeTarget "Integrated" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23DB4B4E1847E08C00BA92FB /* Debug */,
+				23DB4B4F1847E08C00BA92FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		23DB4B501847E08C00BA92FB /* Build configuration list for PBXNativeTarget "IntegratedTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23DB4B511847E08C00BA92FB /* Debug */,
+				23DB4B521847E08C00BA92FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 23DB4B131847E08C00BA92FB /* Project object */;
+}
