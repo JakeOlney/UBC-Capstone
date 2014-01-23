@@ -37,6 +37,8 @@
     _generator = [[FSKSerialGenerator alloc] init];
     [_generator play];
     
+    //Initialize Data Array
+    Data.initECG;
     
     //[APP_DELEGATE.generator writeByte: (uint8_t)252]; //ready go code
     

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="sT6-rs-VuT">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="qvd-XN-grS">
+            <objects>
+                <viewController id="XCM-yW-l3d" customClass="SCGViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cXy-2w-0Yf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" id="nun-lE-d0p">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <items>
+                                    <navigationItem title="SCG" id="vRx-YE-NKS">
+                                        <barButtonItem key="backBarButtonItem" title="Menu" id="2HY-Kc-8fk"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Menu" id="AwE-jh-z6b">
+                                            <connections>
+                                                <action selector="exit:" destination="XCM-yW-l3d" id="F5k-Ih-6gH"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="YoK-bJ-Gey">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oYt-wh-ZkZ">
+                                                <rect key="frame" x="279" y="7" width="25" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <state key="normal" image="pauseWhite">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pause:" destination="XCM-yW-l3d" eventType="touchUpInside" id="Tky-qz-Di2"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="koI-gM-Ofr"/>
+                    <connections>
+                        <outlet property="exit" destination="AwE-jh-z6b" id="MTL-Qf-0NV"/>
+                        <outlet property="pause" destination="oYt-wh-ZkZ" id="oUv-Nj-Qm2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KhI-3Q-Knb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="635" y="-242"/>
+        </scene>
+        <!--Overlay View Controller-->
+        <scene sceneID="egQ-3a-VV6">
+            <objects>
+                <viewController id="Bu1-9a-pYN" customClass="OverlayViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uj8-sd-Zop">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" id="2YC-bz-4t1">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <items>
+                                    <navigationItem title="ECG &amp; SCG Overlay" id="wHu-CU-dWy">
+                                        <barButtonItem key="leftBarButtonItem" title="Menu" id="rYe-aH-RkP">
+                                            <connections>
+                                                <action selector="exit:" destination="Bu1-9a-pYN" id="ZLi-Ey-yWT"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="5wm-zQ-sue">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kkc-dl-hsf">
+                                                <rect key="frame" x="279" y="7" width="25" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <state key="normal" image="pauseWhite">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pause:" destination="Bu1-9a-pYN" eventType="touchUpInside" id="U4W-Fb-7yd"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sP2-5U-wL7"/>
+                    <connections>
+                        <outlet property="exit" destination="rYe-aH-RkP" id="AeB-vy-f7x"/>
+                        <outlet property="pause" destination="kkc-dl-hsf" id="kQx-9K-251"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dvk-av-n0t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1024" y="-242"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="3r2-aC-l6n">
+            <objects>
+                <viewController id="sT6-rs-VuT" customClass="MenuViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KiC-8D-8ca">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hpx-uy-Cu5">
+                                <rect key="frame" x="116" y="129" width="89" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ECG &amp; SCG">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Sx5-sH-20d" kind="modal" modalTransitionStyle="flipHorizontal" id="yna-sm-GRN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="swd-1X-u7g">
+                                <rect key="frame" x="137" y="186" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ECG">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="MWL-Vy-tZL" kind="modal" modalTransitionStyle="flipHorizontal" id="367-Tx-ekc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ACV-Ta-YTJ">
+                                <rect key="frame" x="137" y="244" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="SCG">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="XCM-yW-l3d" kind="modal" modalTransitionStyle="flipHorizontal" id="rBY-Vs-LaT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Sxt-sS-AHf">
+                                <rect key="frame" x="90" y="301" width="140" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ECG &amp; SCG Overlay">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Bu1-9a-pYN" kind="modal" modalTransitionStyle="flipHorizontal" id="f7v-h5-lGS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YpO-dX-zrB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-739" y="-778"/>
+        </scene>
+        <!--Double View Controller-->
+        <scene sceneID="OHS-yq-DKi">
+            <objects>
+                <viewController id="Sx5-sH-20d" customClass="DoubleViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6fH-2h-LdI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" id="JMv-Kl-FFC">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <items>
+                                    <navigationItem title="ECG &amp; SCG" id="QSm-OJ-mvf">
+                                        <barButtonItem key="backBarButtonItem" title="Menu" id="VTa-u8-LHJ"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Menu" id="Z1N-sz-aCl">
+                                            <connections>
+                                                <action selector="exit:" destination="Sx5-sH-20d" id="8Ha-hU-yYv"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="Ird-Ip-DqD">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1WW-8D-78G">
+                                                <rect key="frame" x="279" y="7" width="25" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <state key="normal" image="pauseWhite">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pause:" destination="Sx5-sH-20d" eventType="touchUpInside" id="D8S-6o-r9P"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xf2-4n-fAz"/>
+                    <connections>
+                        <outlet property="exit" destination="Z1N-sz-aCl" id="g4l-bE-oZn"/>
+                        <outlet property="pause" destination="1WW-8D-78G" id="OzK-de-7WT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CYa-Fx-8Jp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-165" y="-242"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="uea-F1-hGj">
+            <objects>
+                <viewController id="MWL-Vy-tZL" customClass="ECGViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hQV-WO-Y1z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" id="Wv8-Vg-zJo">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <items>
+                                    <navigationItem title="ECG" id="Y1u-hQ-vF5">
+                                        <barButtonItem key="backBarButtonItem" title="Menu" id="Qof-2x-Ttm"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Menu" id="Kdg-wh-tjb">
+                                            <connections>
+                                                <action selector="exit:" destination="MWL-Vy-tZL" id="D7z-Cg-a97"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="jGL-9Q-pcf">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="pNQ-42-lSB">
+                                                <rect key="frame" x="279" y="7" width="25" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <state key="normal" image="pauseWhite">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pause:" destination="MWL-Vy-tZL" eventType="touchUpInside" id="cY5-tf-ai1"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Yub-em-aRd"/>
+                    <connections>
+                        <outlet property="exit" destination="Kdg-wh-tjb" id="TAd-mS-gEY"/>
+                        <outlet property="pause" destination="pNQ-42-lSB" id="Pev-im-DsD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gos-W0-LZQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="237" y="-242"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pauseWhite" width="40" height="44"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

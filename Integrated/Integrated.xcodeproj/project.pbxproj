@@ -19,7 +19,6 @@
 		23DB4B401847E08C00BA92FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23DB4B221847E08C00BA92FB /* UIKit.framework */; };
 		23DB4B481847E08C00BA92FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23DB4B461847E08C00BA92FB /* InfoPlist.strings */; };
 		23DB4B4A1847E08C00BA92FB /* IntegratedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB4B491847E08C00BA92FB /* IntegratedTests.m */; };
-		23DB4BA41847E17700BA92FB /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23DB4BA31847E17700BA92FB /* libCorePlot-CocoaTouch.a */; };
 		23DB4BB71847E21100BA92FB /* AudioQueueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB4BA71847E21100BA92FB /* AudioQueueObject.m */; };
 		23DB4BB81847E21100BA92FB /* AudioSignalAnalyzer.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB4BA91847E21100BA92FB /* AudioSignalAnalyzer.m */; };
 		23DB4BB91847E21100BA92FB /* AudioSignalGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB4BAB1847E21100BA92FB /* AudioSignalGenerator.m */; };
@@ -182,7 +181,6 @@
 				23DB4B211847E08C00BA92FB /* CoreGraphics.framework in Frameworks */,
 				23DB4B231847E08C00BA92FB /* UIKit.framework in Frameworks */,
 				23DB4B1F1847E08C00BA92FB /* Foundation.framework in Frameworks */,
-				23DB4BA41847E17700BA92FB /* libCorePlot-CocoaTouch.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,10 +627,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Integrated/Integrated-Prefix.pch";
 				INFOPLIST_FILE = "Integrated/Integrated-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/Jake/Documents/EECE\\ 409/Xcode\\ Tutorials/Integrated",
-				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -647,10 +641,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Integrated/Integrated-Prefix.pch";
 				INFOPLIST_FILE = "Integrated/Integrated-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/Jake/Documents/EECE\\ 409/Xcode\\ Tutorials/Integrated",
-				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -718,6 +708,7 @@
 				23DB4B4F1847E08C00BA92FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		23DB4B501847E08C00BA92FB /* Build configuration list for PBXNativeTarget "IntegratedTests" */ = {
 			isa = XCConfigurationList;
@@ -726,6 +717,7 @@
 				23DB4B521847E08C00BA92FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
