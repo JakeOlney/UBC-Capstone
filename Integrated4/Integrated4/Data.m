@@ -36,8 +36,8 @@ static NSMutableArray *data1;
 {
     NSNumber *temp = [NSNumber numberWithInt:newPoint];
     [data1 addObject: temp];
-    NSLog(@"newPoint: %i", newPoint);
-    NSLog(@"temp addECG: %@", temp);
+//    NSLog(@"newPoint: %i", newPoint);
+//    NSLog(@"temp addECG: %@", temp);
     //NSLog(@"temp data1: %@", [data1 objectAtIndex:ecgProgress]);
 }
 

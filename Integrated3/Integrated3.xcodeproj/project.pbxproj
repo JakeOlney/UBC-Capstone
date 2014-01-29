@@ -280,8 +280,8 @@
 		2338D7631885D4AC0096FDCA /* CorePlot */ = {
 			isa = PBXGroup;
 			children = (
-				2338D7641885D4CC0096FDCA /* CorePlotHeaders */,
 				2338D7B31885D4CC0096FDCA /* libCorePlot-CocoaTouch.a */,
+				2338D7641885D4CC0096FDCA /* CorePlotHeaders */,
 			);
 			name = CorePlot;
 			sourceTree = "<group>";
@@ -712,6 +712,7 @@
 				2338D75F1885D49F0096FDCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2338D7601885D49F0096FDCA /* Build configuration list for PBXNativeTarget "Integrated3Tests" */ = {
 			isa = XCConfigurationList;
@@ -720,6 +721,7 @@
 				2338D7621885D49F0096FDCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

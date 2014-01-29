@@ -50,13 +50,13 @@
     screenStart = 2000;
     flag = 0;
     
-    newDataTimer = [NSTimer scheduledTimerWithTimeInterval:0.01
+    newDataTimer = [NSTimer scheduledTimerWithTimeInterval:0.09
                                                              target:self
                                                            selector:@selector(newData:)
                                                            userInfo:nil
                                                             repeats:YES];
     
-    scrollTimer = [NSTimer scheduledTimerWithTimeInterval:0.01
+    scrollTimer = [NSTimer scheduledTimerWithTimeInterval:0.09
                                                             target:self
                                                           selector:@selector(scrollPlot:)
                                                           userInfo:nil
@@ -87,7 +87,9 @@
     //Add value to array and then to plot
     //else
     //{
+        //ecgProgress = Data.getECG;
         NSNumber *x = [Data getECGData:ecgProgress];
+        NSLog(@"FUCK YOU!");
         [data1 addObject: x];
         
         if(flag == 9)
@@ -97,7 +99,7 @@
             plotIndex ++;
             ecgProgress ++;
             //scgProgress ++;
-            Data.setECG;
+            //Data.setECG;
             //Data.setSCG;
             flag = 0;
         }
@@ -108,7 +110,7 @@
             plotIndex ++;
             ecgProgress ++;
             //scgProgress ++;
-            Data.setECG;
+            //Data.setECG;
             //Data.setSCG;
             flag++;
         }

@@ -237,6 +237,7 @@
 		2338D80B188730470096FDCA /* Integrated4 */ = {
 			isa = PBXGroup;
 			children = (
+				23BE16A41891EC800053A05E /* iPad */,
 				2338D814188730470096FDCA /* AppDelegate.h */,
 				2338D815188730470096FDCA /* AppDelegate.m */,
 				2338D8A81887315E0096FDCA /* Main.storyboard */,
@@ -400,6 +401,13 @@
 			path = CorePlotHeaders;
 			sourceTree = "<group>";
 		};
+		23BE16A41891EC800053A05E /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -447,6 +455,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Jake Olney";
 				TargetAttributes = {
+					2338D801188730470096FDCA = {
+						DevelopmentTeam = HSK4RR3736;
+					};
 					2338D822188730470096FDCA = {
 						TestTargetID = 2338D801188730470096FDCA;
 					};
@@ -626,15 +637,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Integrated4/Integrated4-Prefix.pch";
 				INFOPLIST_FILE = "Integrated4/Integrated4-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/Jake/Documents/EECE\\ 409/UBC-Capstone/Integrated4",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -644,15 +660,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Integrated4/Integrated4-Prefix.pch";
 				INFOPLIST_FILE = "Integrated4/Integrated4-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/Jake/Documents/EECE\\ 409/UBC-Capstone/Integrated4",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -718,6 +739,7 @@
 				2338D836188730470096FDCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2338D837188730470096FDCA /* Build configuration list for PBXNativeTarget "Integrated4Tests" */ = {
 			isa = XCConfigurationList;
@@ -726,6 +748,7 @@
 				2338D839188730470096FDCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

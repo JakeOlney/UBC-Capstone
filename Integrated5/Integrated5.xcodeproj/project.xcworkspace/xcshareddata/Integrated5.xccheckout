@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>457EC0AE-2A37-4ED0-9657-97DB84C5E5DA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Integrated5</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2B8E593D-8BB2-4D68-B68E-0D2E43604C4F</key>
+		<string>https://github.com/JakeOlney/UBC-Capstone.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Integrated5/Integrated5.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2B8E593D-8BB2-4D68-B68E-0D2E43604C4F</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/JakeOlney/UBC-Capstone.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2B8E593D-8BB2-4D68-B68E-0D2E43604C4F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2B8E593D-8BB2-4D68-B68E-0D2E43604C4F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>UBC-Capstone</string>
+		</dict>
+	</array>
+</dict>
+</plist>

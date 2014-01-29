@@ -65,7 +65,7 @@
         //  NSLog(@"Here\n");
     }
     
-    [NSTimer scheduledTimerWithTimeInterval:0.1
+    [NSTimer scheduledTimerWithTimeInterval:0.01  //0.1
                                      target:self
                                    selector:@selector(intervalReadReq:)
                                    userInfo:nil
@@ -134,23 +134,18 @@
 - (void) receivedChar:(char)input
 {
     int z=input;
-    int temp = (int)input;
-
-    // int c=0;
-    
-    //  int temp = input;
-    if (input >= -128 && input < 0 )
-    {
+   if (input >= -128 && input < 0 )
+   {
         z = 2*128 + input;
-    }
-    else
-    {
-        z = input;
-    }
+   }
+//    else
+//    {
+//        z = input;
+//    }
     
-    NSLog(@"input: %i", input);
-    NSLog(@"temp: %i", temp);
-    [Data addECG: temp];
+  //  NSLog(@"input: %i", input);
+    NSLog(@"temp: %i", z);
+    [Data addECG: z];
     Data.setECG;
     
 }

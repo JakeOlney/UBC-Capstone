@@ -25,6 +25,7 @@
     NSTimer *scrollTimer1;
     NSTimer *scrollTimer2;
     int flag;
+    int paramFlag;
     CPTPlotSpaceAnnotation *symbolTextAnnotation;
     CPTPlotSpaceAnnotation *symbolText2Annotation;
 }
@@ -62,6 +63,7 @@
     screenStart2 = 2000;
 
     flag = 0;
+    paramFlag = 0;
 
     newDataTimer = [NSTimer scheduledTimerWithTimeInterval:0.00001
                                                              target:self
@@ -749,24 +751,51 @@
     NSNumber *max = 0;
     NSNumber *maxTemp = 0;
     int maxIndex = 0;
+    NSNumber *min = 0;
+    NSNumber *minTemp = 0;
+    int minIndex = 0;
     
-    for(int i = idx-10; i < idx+10; i++)
+    if(val > 0)
     {
-        if([data1 objectAtIndex:i] < [data1 objectAtIndex:i+1])
+        for(int i = idx-10; i < idx+10; i++)
         {
-            maxTemp = [data1 objectAtIndex:i+1];
+            if([data1 objectAtIndex:i] > [data1 objectAtIndex:i+1])
+            {
+                maxTemp = [data1 objectAtIndex:i];
+                
+                if([data1 objectAtIndex:i] > max)
+                {
+                    max = [data1 objectAtIndex:i];
+                    maxIndex = i;
+                }
+            }
             
-            if(
-            maxIndex = i+1;
-        }
-        
-        else
-        {
-            max = [data1 objectAtIndex:i];
-            maxIndex = i+1;
+            else
+            {
+            }
         }
     }
     
+    else
+    {
+        for(int i = idx-10; i < idx+10; i++)
+        {
+            if([data1 objectAtIndex:i] < [data1 objectAtIndex:i+1])
+            {
+                minTemp = [data1 objectAtIndex:i];
+                
+                if([data1 objectAtIndex:i] < min)
+                {
+                    min = [data1 objectAtIndex:i];
+                    minIndex = i;
+                }
+            }
+            
+            else
+            {
+            }
+        }
+    }
     
     
     if([plot.identifier isEqual:@"ECG"])
@@ -784,12 +813,17 @@
         hitAnnotationTextStyle.fontName = @"Helvetica-Bold";
         
         // Determine point of symbol in plot coordinates
-        NSNumber *x          = [NSNumber numberWithInt:idx];
-        NSNumber *y          = [data1 objectAtIndex:idx];
+        NSNumber *x          = [NSNumber numberWithInt:maxIndex];
+        NSNumber *y          = [data1 objectAtIndex:max];
         NSArray *anchorPoint = [NSArray arrayWithObjects:x, y, nil];
         
         //Make a string for the y value
-        NSString *yString = [y stringValue];
+        NSString *yString;
+        if(paramFlag == 0)
+        {
+            yString = @"R";
+            paramFlag = 1;
+        }
         
         // Now add the annotation to the plot area
         CPTTextLayer *textLayer = [[CPTTextLayer alloc] initWithText:yString style:hitAnnotationTextStyle];
@@ -813,12 +847,27 @@
         hitAnnotation2TextStyle.fontName = @"Helvetica-Bold";
         
         // Determine point of symbol in plot coordinates
-        NSNumber *x2          = [NSNumber numberWithInt:idx];
-        NSNumber *y2          = [data2 objectAtIndex:idx];
+        NSNumber *x2          = [NSNumber numberWithInt:minIndex];
+        NSNumber *y2          = [data2 objectAtIndex:min];
         NSArray *anchor2Point = [NSArray arrayWithObjects:x2, y2, nil];
         
         //Make a string for the y value
-        NSString *y2String = [y2 stringValue];
+        NSString *y2String;
+        if(paramFlag == 0)
+        {
+        }
+        
+        else if(paramFlag == 1)
+        {
+            y2String = @"AVO";
+            paramFlag = 2;
+        }
+        
+        else
+        {
+            y2String = @"AVC";
+            paramFlag = 0;
+        }
         
         // Now add the annotation to the plot area
         CPTTextLayer *text2Layer = [[CPTTextLayer alloc] initWithText:y2String style:hitAnnotation2TextStyle];
