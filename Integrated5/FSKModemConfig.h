@@ -22,9 +22,9 @@
 //#define FREQ_HIGH 3150
 //#define BAUD  315
 
-//#define FREQ_LOW  2666
-//#define FREQ_HIGH 4000
-/////#define BAUD  600
+///#define FREQ_LOW  2666
+///#define FREQ_HIGH 4000
+///#define BAUD  600
 
 //#define FREQ_LOW  3150
 //#define FREQ_HIGH 6300
@@ -33,8 +33,3 @@
 #define BAUD  1225*1//*11
 #define FREQ_LOW  4900*1//*4
 #define FREQ_HIGH 7350*1//*4
-
-
-//#define BAUD  300//*11
-//#define FREQ_LOW  2200*1//*4
-//#define FREQ_HIGH 3200*1//*4

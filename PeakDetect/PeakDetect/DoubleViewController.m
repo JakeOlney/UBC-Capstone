@@ -11,6 +11,7 @@
 #import "FileRead.h"
 #import "Data.h"
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface DoubleViewController ()
 {
     int plotIndex;
@@ -21,6 +22,7 @@
     NSMutableArray *data1, *data2;
     NSArray *dataTemp1;
     NSArray *dataTemp2;
+    NSMutableArray *maxArray;
     NSTimer *newDataTimer;
     NSTimer *scrollTimer1;
     NSTimer *scrollTimer2;
@@ -28,6 +30,12 @@
     int paramFlag;
     CPTPlotSpaceAnnotation *symbolTextAnnotation;
     CPTPlotSpaceAnnotation *symbolText2Annotation;
+    CPTPlotSpaceAnnotation *symbolText3Annotation;
+    CPTPlotSpaceAnnotation *symbolText4Annotation;
+    NSNumber *max, *max2;
+    int maxTemp, maxTemp2;
+    int maxIndex, maxIndex2;
+    int R, AVO, AVC;
 }
 
 @property (nonatomic, strong) CPTGraphHostingView *hostView1;
@@ -40,6 +48,7 @@
 @synthesize hostView1 = hostView1_;
 @synthesize hostView2 = hostView2_;
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -47,6 +56,7 @@
     
     data1 = [NSMutableArray arrayWithObjects: nil];
     data2 = [NSMutableArray arrayWithObjects: nil];
+    maxArray = [NSMutableArray arrayWithObjects: nil];
 
     FileRead *fileReader = [[FileRead alloc] init];
     dataTemp1 = fileReader.fileReader1;
@@ -86,12 +96,14 @@
     [self initPlot];
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 -(void)newData:(NSTimer *)newDataTimer
 {
     //Get the plots
@@ -101,7 +113,7 @@
     CPTGraph *theGraph2 = self.hostView2.hostedGraph;
     CPTPlot *SCG   = [theGraph2 plotWithIdentifier:@"SCG"];
     
-    //Plot until x=100
+    //Check for end of data
     if(ecgProgress > 15000)
     {
         [newDataTimer invalidate];
@@ -149,6 +161,7 @@
     }
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 -(void) scrollPlot1:(NSTimer *)scrollTimer1
 {
     CPTGraph *theGraph = self.hostView1.hostedGraph;
@@ -183,6 +196,7 @@
     }
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 -(void) scrollPlot2:(NSTimer *)scrollTimer2
 {
     CPTGraph *theGraph = self.hostView2.hostedGraph;
@@ -217,6 +231,7 @@
     }
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 -(void)initPlot {
     [self configureHost];
     [self configureGraph];
@@ -226,6 +241,7 @@
     [self configureAxes2];
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 -(void) configureHost
 {
     //CGRect parentRect = self.view.bounds;
@@ -242,6 +258,7 @@
     [self.view addSubview:hostView2_];
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 -(void) configureGraph
 {
     // 1 - Create the Graph
@@ -267,6 +284,7 @@
     plotSpace2.allowsUserInteraction = YES;
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 -(void) configurePlot1
 {
     // 1 - Get graph and plot space
@@ -314,6 +332,7 @@
     ECG.plotSymbolMarginForHitDetection = 5.0;
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 -(void) configurePlot2
 {
     // 1 - Get graph and plot space
@@ -361,6 +380,7 @@
     SCG.plotSymbolMarginForHitDetection = 5.0;
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 -(void) configureAxes1
 {
     // 1 - Create styles
@@ -494,6 +514,7 @@
     y.minorTickLocations = yMinorLocations;
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 -(void) configureAxes2
 {
     // 1 - Create styles
@@ -627,6 +648,7 @@
     y.minorTickLocations = yMinorLocations;
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 -(NSUInteger)numberOfRecordsForPlot:(CPTPlot *)plot
 {
     if([plot.identifier isEqual:@"ECG"])
@@ -639,6 +661,7 @@
     }
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 -(NSNumber *)numberForPlot:(CPTPlot *)plot field:(NSUInteger)fieldEnum recordIndex:(NSUInteger)index
 {
     if(fieldEnum == CPTScatterPlotFieldX)
@@ -664,6 +687,7 @@
     }
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 - (IBAction)exit:(id)sender
 {
     [newDataTimer invalidate];
@@ -675,6 +699,7 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 - (IBAction)pause:(id)sender
 {
     
@@ -712,6 +737,7 @@
     }
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 -(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
     if(fromInterfaceOrientation == UIInterfaceOrientationPortrait || fromInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown)
@@ -738,120 +764,118 @@
     }
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 -(void)scatterPlot:(CPTScatterPlot *)plot plotSymbolWasSelectedAtRecordIndex:(NSUInteger)idx
 {
     NSNumber *val = [data1 objectAtIndex:idx];
-    NSLog(@"Touched point: %ld, with value: %@", idx, val);
-    //NSLog(@"Touch!");
+    NSLog(@"Touched point: %i, with value: %@", idx, val);
     
     CPTGraph *graph1 = self.hostView1.hostedGraph;
     CPTGraph *graph2 = self.hostView2.hostedGraph;
     
-    //Find max value within 20 points of touch
-    NSNumber *max = 0;
-    NSNumber *maxTemp = 0;
-    int maxIndex = 0;
-    NSNumber *min = 0;
-    NSNumber *minTemp = 0;
-    int minIndex = 0;
-    
-    if(val > 0)
-    {
-        for(NSUInteger i = idx-25; i < idx+25; i++)
-        {
-            if([data1 objectAtIndex:i] > [data1 objectAtIndex:i+1])
-            {
-                maxTemp = [data1 objectAtIndex:i];
-                
-                if([data1 objectAtIndex:i] > max)
-                {
-                    max = [data1 objectAtIndex:i];
-                    maxIndex = i;
-                }
-            }
-            
-            else
-            {
-            }
-        }
-    }
-    
-    else
-    {
-        for(NSUInteger i = idx-25; i < idx+25; i++)
-        {
-            if([data1 objectAtIndex:i] < [data1 objectAtIndex:i+1])
-            {
-                minTemp = [data1 objectAtIndex:i];
-                
-                if([data1 objectAtIndex:i] < min)
-                {
-                    min = [data1 objectAtIndex:i];
-                    minIndex = i;
-                }
-            }
-            
-            else
-            {
-            }
-        }
-    }
+    //Find max value within 50 points of touch
+    max = 0;
+    max2 = 0;
+    maxTemp = 0;
+    maxTemp2 = 0;
+    maxIndex = 0;
+    maxIndex2 = 0;
     
     if([plot.identifier isEqual:@"ECG"])
     {
-        /*if ( symbolTextAnnotation )
+        for(NSUInteger i = idx-100; i <= idx+100; i++)
         {
-            [graph1.plotAreaFrame.plotArea removeAnnotation:symbolTextAnnotation];
-            symbolTextAnnotation = nil;
-        }*/
+            [maxArray addObject: [data1 objectAtIndex: i]];
+        }
         
-        // Setup a style for the annotation
+        maxTemp = [[maxArray valueForKeyPath:@"@max.intValue"] intValue];
+        max = [NSNumber numberWithInt:maxTemp];
+        NSRange dataRange = NSMakeRange(idx - 100, 200);
+        maxIndex = [data1 indexOfObject:max inRange:dataRange];
+        
+        NSLog(@"Max is: %@, at location: %i", max, maxIndex );
+        
+        // Setup a style for "R" annotation
         CPTMutableTextStyle *hitAnnotationTextStyle = [CPTMutableTextStyle textStyle];
         hitAnnotationTextStyle.color    = [CPTColor whiteColor];
         hitAnnotationTextStyle.fontSize = 16.0;
         hitAnnotationTextStyle.fontName = @"Helvetica-Bold";
+        
+        //Setup a style for plot symbol
+        CPTMutableTextStyle *hitAnnotation2TextStyle = [CPTMutableTextStyle textStyle];
+        hitAnnotation2TextStyle.color    = [CPTColor orangeColor];
+        hitAnnotation2TextStyle.fontSize = 24.0;
+        hitAnnotation2TextStyle.fontName = @"Helvetica-Bold";
         
         // Determine point of symbol in plot coordinates
         NSNumber *x          = [NSNumber numberWithInt:maxIndex];
         NSNumber *y          = max;
         NSArray *anchorPoint = [NSArray arrayWithObjects:x, y, nil];
         
-        //Make a string for the y value
+        //Make a string for the annotation
         NSString *yString;
+        
         if(paramFlag == 0)
         {
             yString = @"R";
             paramFlag = 1;
+            
+            // Now add the annotation to the plot area
+            CPTTextLayer *textLayer = [[CPTTextLayer alloc] initWithText:yString style:hitAnnotationTextStyle];
+            symbolTextAnnotation = [[CPTPlotSpaceAnnotation alloc] initWithPlotSpace:graph1.defaultPlotSpace anchorPlotPoint:anchorPoint];
+            symbolTextAnnotation.contentLayer = textLayer;
+            symbolTextAnnotation.displacement = CGPointMake(0.0, 10.0);
+            [graph1.plotAreaFrame.plotArea addAnnotation:symbolTextAnnotation];
+            
+            //Add Plot Symbol
+            CPTTextLayer *text2Layer = [[CPTTextLayer alloc] initWithText:@"." style:hitAnnotation2TextStyle];
+            symbolText2Annotation = [[CPTPlotSpaceAnnotation alloc] initWithPlotSpace:graph1.defaultPlotSpace anchorPlotPoint:anchorPoint];
+            symbolText2Annotation.contentLayer = text2Layer;
+            symbolText2Annotation.displacement = CGPointMake(0.0, 5.0);
+            [graph1.plotAreaFrame.plotArea addAnnotation:symbolText2Annotation];
+            
+            NSLog(@"R");
+            
+            R = maxIndex;
         }
         
-        // Now add the annotation to the plot area
-        CPTTextLayer *textLayer = [[CPTTextLayer alloc] initWithText:yString style:hitAnnotationTextStyle];
-        symbolTextAnnotation = [[CPTPlotSpaceAnnotation alloc] initWithPlotSpace:graph1.defaultPlotSpace anchorPlotPoint:anchorPoint];
-        symbolTextAnnotation.contentLayer = textLayer;
-        symbolTextAnnotation.displacement = CGPointMake(0.0, 20.0);
-        [graph1.plotAreaFrame.plotArea addAnnotation:symbolTextAnnotation];
     }
     
     else
     {
-        /*if ( symbolText2Annotation ) {
-            [graph2.plotAreaFrame.plotArea removeAnnotation:symbolText2Annotation];
-            symbolText2Annotation = nil;
-        }*/
+        //Find max value within range
+        for(NSUInteger i = idx-50; i <= idx+50; i++)
+        {
+            [maxArray addObject: [data2 objectAtIndex: i]];
+        }
         
-        // Setup a style for the annotation
-        CPTMutableTextStyle *hitAnnotation2TextStyle = [CPTMutableTextStyle textStyle];
-        hitAnnotation2TextStyle.color    = [CPTColor whiteColor];
-        hitAnnotation2TextStyle.fontSize = 16.0;
-        hitAnnotation2TextStyle.fontName = @"Helvetica-Bold";
+        maxTemp2 = [[maxArray valueForKeyPath:@"@max.intValue"] intValue];
+        max2 = [NSNumber numberWithInt:maxTemp2];
+        NSRange dataRange = NSMakeRange(idx - 50, 100);
+        maxIndex2 = [data2 indexOfObject:max2 inRange:dataRange];
+        
+        NSLog(@"Max is: %@, at location: %i", max2, maxIndex2 );
+        
+        // Setup a style for "AVO" or "AVC" annotation
+        CPTMutableTextStyle *hitAnnotation3TextStyle = [CPTMutableTextStyle textStyle];
+        hitAnnotation3TextStyle.color    = [CPTColor whiteColor];
+        hitAnnotation3TextStyle.fontSize = 16.0;
+        hitAnnotation3TextStyle.fontName = @"Helvetica-Bold";
+        
+        //Setup a style for plot symbol
+        CPTMutableTextStyle *hitAnnotation4TextStyle = [CPTMutableTextStyle textStyle];
+        hitAnnotation4TextStyle.color    = [CPTColor cyanColor];
+        hitAnnotation4TextStyle.fontSize = 24.0;
+        hitAnnotation4TextStyle.fontName = @"Helvetica-Bold";
         
         // Determine point of symbol in plot coordinates
-        NSNumber *x2          = [NSNumber numberWithInt:minIndex];
-        NSNumber *y2          = min;
+        NSNumber *x2          = [NSNumber numberWithInt:maxIndex2];
+        NSNumber *y2          = max2;
         NSArray *anchor2Point = [NSArray arrayWithObjects:x2, y2, nil];
         
-        //Make a string for the y value
+        //Make a string for the annotation
         NSString *y2String;
+        
         if(paramFlag == 0)
         {
         }
@@ -860,24 +884,65 @@
         {
             y2String = @"AVO";
             paramFlag = 2;
+            
+            // Now add the annotation to the plot area
+            CPTTextLayer *text3Layer = [[CPTTextLayer alloc] initWithText:y2String style:hitAnnotation3TextStyle];
+            symbolText3Annotation = [[CPTPlotSpaceAnnotation alloc] initWithPlotSpace:graph2.defaultPlotSpace anchorPlotPoint:anchor2Point];
+            symbolText3Annotation.contentLayer = text3Layer;
+            symbolText3Annotation.displacement = CGPointMake(0.0, 10.0);
+            [graph2.plotAreaFrame.plotArea addAnnotation:symbolText3Annotation];
+            
+            //Add Plot Symbol
+            CPTTextLayer *text4Layer = [[CPTTextLayer alloc] initWithText:@"." style:hitAnnotation4TextStyle];
+            symbolText4Annotation = [[CPTPlotSpaceAnnotation alloc] initWithPlotSpace:graph2.defaultPlotSpace anchorPlotPoint:anchor2Point];
+            symbolText4Annotation.contentLayer = text4Layer;
+            symbolText4Annotation.displacement = CGPointMake(0.0, 5.0);
+            [graph2.plotAreaFrame.plotArea addAnnotation:symbolText4Annotation];
+            
+            NSLog(@"AVO");
+            
+            AVO = maxIndex2;
+            
+            //NSLog(@"SCG Max Index: %d", maxIndex2);
         }
         
         else
         {
             y2String = @"AVC";
             paramFlag = 0;
+            
+            // Now add the annotation to the plot area
+            CPTTextLayer *text3Layer = [[CPTTextLayer alloc] initWithText:y2String style:hitAnnotation3TextStyle];
+            symbolText3Annotation = [[CPTPlotSpaceAnnotation alloc] initWithPlotSpace:graph2.defaultPlotSpace anchorPlotPoint:anchor2Point];
+            symbolText3Annotation.contentLayer = text3Layer;
+            symbolText3Annotation.displacement = CGPointMake(0.0, 10.0);
+            [graph2.plotAreaFrame.plotArea addAnnotation:symbolText3Annotation];
+            
+            //Add Plot symbol
+            CPTTextLayer *text4Layer = [[CPTTextLayer alloc] initWithText:@"." style:hitAnnotation4TextStyle];
+            symbolText4Annotation = [[CPTPlotSpaceAnnotation alloc] initWithPlotSpace:graph2.defaultPlotSpace anchorPlotPoint:anchor2Point];
+            symbolText4Annotation.contentLayer = text4Layer;
+            symbolText4Annotation.displacement = CGPointMake(0.0, 5.0);
+            [graph2.plotAreaFrame.plotArea addAnnotation:symbolText4Annotation];
+            
+            NSLog(@"AVC");
+            
+            AVC = maxIndex2;
+            
+            int PEP = AVO - R;
+            int LVET = AVC - AVO;
+            
+            UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Calculated Parameters!"
+                                                              message:[NSString stringWithFormat:@"Pre-Ejection Period: %d\nLeft Ventricular Ejection Time: %d", PEP, LVET]
+                                                             delegate:nil
+                                                    cancelButtonTitle:@"Done"
+                                                    otherButtonTitles:nil];
+            
+            [message show];
         }
-        
-        // Now add the annotation to the plot area
-        CPTTextLayer *text2Layer = [[CPTTextLayer alloc] initWithText:y2String style:hitAnnotation2TextStyle];
-        symbolText2Annotation = [[CPTPlotSpaceAnnotation alloc] initWithPlotSpace:graph2.defaultPlotSpace anchorPlotPoint:anchor2Point];
-        symbolText2Annotation.contentLayer = text2Layer;
-        symbolText2Annotation.displacement = CGPointMake(0.0, 20.0);
-        
-        NSLog(@"This is Bullshit...");
-        
-        [graph2.plotAreaFrame.plotArea addAnnotation:symbolText2Annotation];
     }
+    
+    [maxArray removeAllObjects];
 }
 
 @end

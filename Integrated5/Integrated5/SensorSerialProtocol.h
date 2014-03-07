@@ -22,7 +22,7 @@
 
 static uint8_t crc8(const uint8_t *buffer, size_t size)
 {
-    const uint8_t POLY = 0x31;   // Polynomial: x**8 + x**5 + x**4 + 1
+    const uint8_t POLY = 0x31;  // Polynomial: x**8 + x**5 + x**4 + 1
     uint8_t crc = 0x00;
     while(size){
         crc ^= *buffer++;

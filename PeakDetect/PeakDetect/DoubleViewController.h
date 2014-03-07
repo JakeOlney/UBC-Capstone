@@ -10,7 +10,7 @@
 #import "CPTScatterPlot.h"
 #import "CPTPlot.h"
 
-@interface DoubleViewController : UIViewController <CPTScatterPlotDelegate, CPTPlotDelegate>
+@interface DoubleViewController : UIViewController <CPTScatterPlotDelegate, CPTPlotDelegate, CPTScatterPlotDataSource>
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *exit;
 @property (weak, nonatomic) IBOutlet UIButton *pause;
@@ -20,6 +20,5 @@
 - (IBAction)pause:(id)sender;
 
 -(void) scatterPlot:(CPTScatterPlot *)plot plotSymbolWasSelectedAtRecordIndex:(NSUInteger)idx;
-
 
 @end

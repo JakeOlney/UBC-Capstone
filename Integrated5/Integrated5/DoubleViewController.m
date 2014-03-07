@@ -85,7 +85,7 @@
         //  NSLog(@"Here\n");
     }
     
-    /*readTimer =*/ [NSTimer scheduledTimerWithTimeInterval:0.001
+    /*readTimer =*/ [NSTimer scheduledTimerWithTimeInterval:0.0001
                                      target:self
                                    selector:@selector(intervalReadReq:)
                                    userInfo:nil
@@ -118,7 +118,7 @@
                                                            userInfo:nil
                                                             repeats:YES];*/
 
-    scrollTimer1 = [NSTimer scheduledTimerWithTimeInterval:0.001
+    scrollTimer1 = [NSTimer scheduledTimerWithTimeInterval:0.0001
                                                             target:self
                                                           selector:@selector(scrollPlot1:)
                                                           userInfo:nil

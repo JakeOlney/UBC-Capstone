@@ -234,6 +234,7 @@
 		23906F2A1898663600753F24 /* Integrated5 */ = {
 			isa = PBXGroup;
 			children = (
+				23B407F518A4831300B4ED65 /* iPad */,
 				23906F331898663600753F24 /* AppDelegate.h */,
 				23906F341898663600753F24 /* AppDelegate.m */,
 				23906FCB1898671000753F24 /* Main.storyboard */,
@@ -395,6 +396,13 @@
 			path = CorePlotHeaders;
 			sourceTree = "<group>";
 		};
+		23B407F518A4831300B4ED65 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -442,6 +450,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Jake Olney";
 				TargetAttributes = {
+					23906F201898663600753F24 = {
+						DevelopmentTeam = HSK4RR3736;
+					};
 					23906F411898663600753F24 = {
 						TestTargetID = 23906F201898663600753F24;
 					};
@@ -620,15 +631,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Integrated5/Integrated5-Prefix.pch";
 				INFOPLIST_FILE = "Integrated5/Integrated5-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/Jake/Documents/EECE\\ 409/UBC-Capstone/Integrated5",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -638,15 +652,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Integrated5/Integrated5-Prefix.pch";
 				INFOPLIST_FILE = "Integrated5/Integrated5-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/Jake/Documents/EECE\\ 409/UBC-Capstone/Integrated5",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -712,6 +729,7 @@
 				23906F551898663600753F24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		23906F561898663600753F24 /* Build configuration list for PBXNativeTarget "Integrated5Tests" */ = {
 			isa = XCConfigurationList;
@@ -720,6 +738,7 @@
 				23906F581898663600753F24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
