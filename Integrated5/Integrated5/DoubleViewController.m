@@ -256,7 +256,7 @@
             plotIndex ++;
             ecgProgress ++;
             //scgProgress ++;
-            Data.setECG;
+            //Data.setECG;
             //Data.setSCG;
             flag = 0;
         }
@@ -269,7 +269,7 @@
             plotIndex ++;
             ecgProgress ++;
             //scgProgress ++;
-            Data.setECG;
+            //Data.setECG;
             //Data.setSCG;
             flag ++;
         }
